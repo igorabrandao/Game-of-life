@@ -14,10 +14,13 @@ Life::Life()
 }
 
 void
-Life::readFile()
+Life::readFile( string _fileName )
 {
-    ifstream ifsIn("teste.txt");    //! Input stream do arquivo de entrada.
-    istringstream iss;              //! Usado para extrair dados da string lida do arquivo de entrada.
+    //! Input stream do arquivo de entrada.
+    ifstream ifsIn(_fileName);    
+
+    //! Usado para extrair dados da string lida do arquivo de entrada.
+    istringstream iss;              
     string sLine;                   //! Armazena uma linha do arquivo de entrada.
     //int nRows, nCols;               //! Armazena o numero de linhas e colunas da matriz.
     //char cLive;                     //! Armazena o caracter que significa que a celula esta viva.
@@ -427,5 +430,7 @@ char Life::setAlive(char _cellState, int _liveNeighbors, char _cLive)
     // Rule number 4
     else if (_cellState != _cLive && _liveNeighbors == 3)
         return _cLive;
+
+    return 'X';
 }
 

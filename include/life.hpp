@@ -11,13 +11,15 @@
 #include <sstream>  //! std::istringstream, std::ostringstream
 #include <string>   //! std::string
 
+using namespace std;
+
 class Life
 {
     //! Public members */
     public:
                 Life();
 
-        void    readFile();
+        void    readFile( string _fileName = filename );
         void    saveFile();
         void    printGrid();
         void    showInitialMensage();
@@ -30,12 +32,13 @@ class Life
         int     endGame();
 
     private:
-        std::vector<char>   mMatriz;
-        std::vector<char>   mMatrizAux;
-        int                 nRows;
-        int                 nCols;
-        char                cLive;
-        int                 numChanges;
+        string          filename = "./data/virus.dat";
+        vector<char>    mMatriz;
+        vector<char>    mMatrizAux;
+        int             nRows;
+        int             nCols;
+        char            cLive;
+        int             numChanges;
 };
 
 #endif // LIFE_HPP

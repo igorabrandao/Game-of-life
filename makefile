@@ -5,7 +5,7 @@
 SOURCES = $(wildcard src/*.cpp)
 
 CC      = g++
-CFLAGS  = -c -g -Wall -std=c++11
+CFLAGS  = -c -g -Wall -std=c++0x
 
 INC_DIR = ./include
 BIN_DIR = ./bin
