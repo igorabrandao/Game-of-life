@@ -1,14 +1,19 @@
+//! Life class
+/*! Implements the structure to the life game
+*/
 #ifndef LIFE_HPP
 #define LIFE_HPP
 
-#include <iostream> // std::cout
-#include <vector>   // std::vector
-#include <fstream>  // std::ifstream , std::ofstream
-#include <sstream>  // std::istringstream,  std::ostringstream
-#include <string>   // std::string
+//! Includes */
+#include <iostream> //! std::cout
+#include <vector>   //! std::vector
+#include <fstream>  //! std::ifstream, std::ofstream
+#include <sstream>  //! std::istringstream, std::ostringstream
+#include <string>   //! std::string
 
 class Life
 {
+    //! Public members */
     public:
                 Life();
 
