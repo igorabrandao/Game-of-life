@@ -6,8 +6,7 @@ O ‘Hell in the Sky’ é um jogo em duas dimensões que tem como objetivo inva
 
 **Membros da equipe**
 
-Igor A. Brandão
-Leandro Antonio F. da Silva
+Igor A. Brandão e Leandro Antonio F. da Silva
 
 **Como compilar**
 
