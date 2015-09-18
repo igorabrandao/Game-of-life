@@ -1,7 +1,11 @@
+//! Life class functions implementation
+/*! Implements the fucntions of The Game of Life
+*/
 #include "life.hpp"
 
 using namespace std;
 
+//! Class constructor */
 Life::Life()
 : mMatriz()
 , mMatrizAux()
@@ -13,11 +17,38 @@ Life::Life()
     /* Empty */
 }
 
+//! Display welcome message */
 void
-Life::readFile( string _fileName )
+Life::showInitialMensage()
+{
+    cout << "****************************************************************" << endl;
+    cout << "  Welcome to Conway's Game of Life." << endl;
+    cout << "  By defaut this game uses a grid of size 20 by 60 in which" << endl;
+    cout << "  each cell can either be occupied by an organism or not." << endl;
+    cout << "  the occupied cells change from generation to generation" << endl;
+    cout << "  according to the number of neighboring cells which are alive." << endl;
+    cout << "****************************************************************" << endl;
+}
+
+//! Starts the simulation itself */
+void
+Life::run()
+{
+    
+    readFile();
+    showInitialMensage();
+    printGrid();
+    update();
+}
+
+//! Function to read an input file
+/*! _fileName -> the input file name
+*/
+void
+Life::readFile()
 {
     //! Input stream do arquivo de entrada.
-    ifstream ifsIn(_fileName);    
+    ifstream ifsIn(getFileName());    
 
     //! Usado para extrair dados da string lida do arquivo de entrada.
     istringstream iss;              
@@ -100,28 +131,6 @@ Life::saveFile()
         ofs.close();
     }
 }
-
-void
-Life::showInitialMensage()
-{
-    cout << "****************************************************************" << endl;
-    cout << "  Welcome to Conway's Game of Life." << endl;
-    cout << "  By defaut this game uses a grid of size 20 by 60 in which" << endl;
-    cout << "  each cell can either be occupied by an organism or not." << endl;
-    cout << "  the occupied cells change from generation to generation" << endl;
-    cout << "  according to the number of neighboring cells which are alive." << endl;
-    cout << "****************************************************************" << endl;
-}
-
-void
-Life::run()
-{
-    readFile();
-    showInitialMensage();
-    printGrid();
-    update();
-}
-
 
 int
 Life::update()

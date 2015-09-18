@@ -1,5 +1,5 @@
 //! Life class
-/*! Implements the structure to the life game
+/*! Implements the structure of The Game of Life
 */
 #ifndef LIFE_HPP
 #define LIFE_HPP
@@ -17,13 +17,27 @@ class Life
 {
     //! Public members */
     public:
-                Life();
 
-        void    readFile( string _fileName = filename );
+        //! Class constructor */
+        Life();
+
+        //! Display welcome message */
+        void showInitialMensage();
+
+        //! Starts the simulation itself */
+        void run();
+
+        //! Function to read an input file
+        /*! _fileName -> the input file name
+        */
+        void    readFile();
+
+        //! Get's and set's */
+        string  getFileName() const { return fileName; } 
+        void    setFileName( const string& _fileName ) { fileName = _fileName; } 
+
         void    saveFile();
         void    printGrid();
-        void    showInitialMensage();
-        void    run();
         int     update();
         bool    isStabe();
         bool    isExtinct();
@@ -32,9 +46,9 @@ class Life
         int     endGame();
 
     private:
-        string          filename = "./data/virus.dat";
         vector<char>    mMatriz;
         vector<char>    mMatrizAux;
+        string          fileName;
         int             nRows;
         int             nCols;
         char            cLive;
