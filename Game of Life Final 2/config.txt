@@ -1,1 +1,1 @@
-glider_gun.dat
+virus.dat

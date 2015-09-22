@@ -26,7 +26,7 @@ int main()
 	ScreenManager::GetInstance().LoadContent();
 
 	Window.setKeyRepeatEnabled(false);
-
+    Window.setFramerateLimit(60);
     sf::Clock   clock;
     sf::Time    timeSinceLastUpdate = sf::Time::Zero;
     /*! Infinite loop that keeps screen */
