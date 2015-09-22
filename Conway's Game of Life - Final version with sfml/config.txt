@@ -1,1 +1,1 @@
-cfg1.dat
+harvester.dat

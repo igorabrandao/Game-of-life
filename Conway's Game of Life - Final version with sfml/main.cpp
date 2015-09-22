@@ -30,7 +30,7 @@ int main()
     sf::Clock   clock;
     sf::Time    timeSinceLastUpdate = sf::Time::Zero;
     /*! Infinite loop that keeps screen */
-	while ( Window.isOpen() )
+	while ( Window.isOpened() )
 	{
 
         sf::Time elapsedTime = clock.restart();
