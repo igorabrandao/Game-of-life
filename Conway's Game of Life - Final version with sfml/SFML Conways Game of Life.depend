@@ -1,0 +1,130 @@
+# depslib dependency file v1.0
+1442862663 source:/home/leandro/Dev/codeblock projects/SFML Conways Game of Life/main.cpp
+	<iostream>
+	<SFML/Graphics.hpp>
+	"ScreenManager.h"
+
+1442834463 /home/leandro/Dev/codeblock projects/SFML Conways Game of Life/include/ScreenManager.h
+	<iostream>
+	"GameScreen.h"
+	"SplashScreen.h"
+	"TitleScreen.h"
+	"LevelScreen.h"
+	"FadeAnimation.h"
+	"FileManager.h"
+
+1442863692 /home/leandro/Dev/codeblock projects/SFML Conways Game of Life/include/GameScreen.h
+	<SFML/Graphics.hpp>
+	"InputManager.h"
+	"FileManager.h"
+
+1442802001 /home/leandro/Dev/codeblock projects/SFML Conways Game of Life/include/InputManager.h
+	<vector>
+	<SFML/Graphics.hpp>
+
+1442801825 /home/leandro/Dev/codeblock projects/SFML Conways Game of Life/include/FileManager.h
+	<vector>
+	<string>
+	<fstream>
+	<algorithm>
+	<iostream>
+	<sstream>
+
+1442802545 /home/leandro/Dev/codeblock projects/SFML Conways Game of Life/include/SplashScreen.h
+	"GameScreen.h"
+	"TitleScreen.h"
+	"ScreenManager.h"
+	"FadeAnimation.h"
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1442836696 /home/leandro/Dev/codeblock projects/SFML Conways Game of Life/include/TitleScreen.h
+	"GameScreen.h"
+	"LevelScreen.h"
+	"ScreenManager.h"
+	"MenuManager.h"
+	"ConfigScreen.h"
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1442802068 /home/leandro/Dev/codeblock projects/SFML Conways Game of Life/include/LevelScreen.h
+	"GameScreen.h"
+	"ScreenManager.h"
+	<iostream>
+	<list>
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+
+1442802265 /home/leandro/Dev/codeblock projects/SFML Conways Game of Life/include/MenuManager.h
+	"FadeAnimation.h"
+	"InputManager.h"
+	"FileManager.h"
+	<iostream>
+	<string>
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+
+1442801729 /home/leandro/Dev/codeblock projects/SFML Conways Game of Life/include/FadeAnimation.h
+	"Animation.h"
+	<iostream>
+
+1442801671 /home/leandro/Dev/codeblock projects/SFML Conways Game of Life/include/Animation.h
+	<string>
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1442801641 source:/home/leandro/Dev/codeblock projects/SFML Conways Game of Life/src/Animation.cpp
+	"Animation.h"
+
+1442834709 source:/home/leandro/Dev/codeblock projects/SFML Conways Game of Life/src/FadeAnimation.cpp
+	"FadeAnimation.h"
+
+1442801844 source:/home/leandro/Dev/codeblock projects/SFML Conways Game of Life/src/FileManager.cpp
+	"FileManager.h"
+	"FileManager.h"
+
+1442801937 source:/home/leandro/Dev/codeblock projects/SFML Conways Game of Life/src/GameScreen.cpp
+	"GameScreen.h"
+
+1442802019 source:/home/leandro/Dev/codeblock projects/SFML Conways Game of Life/src/InputManager.cpp
+	"InputManager.h"
+
+1442802118 source:/home/leandro/Dev/codeblock projects/SFML Conways Game of Life/src/LevelScreen.cpp
+	"LevelScreen.h"
+
+1442834856 source:/home/leandro/Dev/codeblock projects/SFML Conways Game of Life/src/MenuManager.cpp
+	"MenuManager.h"
+
+1442834607 source:/home/leandro/Dev/codeblock projects/SFML Conways Game of Life/src/ScreenManager.cpp
+	"ScreenManager.h"
+
+1442834501 source:/home/leandro/Dev/codeblock projects/SFML Conways Game of Life/src/SplashScreen.cpp
+	"SplashScreen.h"
+
+1442836667 source:/home/leandro/Dev/codeblock projects/SFML Conways Game of Life/src/TitleScreen.cpp
+	"TitleScreen.h"
+
+1442874756 source:/home/leandro/Dev/codeblock projects/SFML Conways Game of Life/src/ConfigScreen.cpp
+	"ConfigScreen.h"
+
+1442865336 /home/leandro/Dev/codeblock projects/SFML Conways Game of Life/include/ConfigScreen.h
+	<string>
+	<iostream>
+	"GameScreen.h"
+	"InputManager.h"
+	"LifeScreen.h"
+	"ScreenManager.h"
+	<sstream>
+
+1442952068 source:/home/leandro/Dev/codeblock projects/SFML Conways Game of Life/src/LifeScreen.cpp
+	"LifeScreen.h"
+
+1442951204 /home/leandro/Dev/codeblock projects/SFML Conways Game of Life/include/LifeScreen.h
+	"GameScreen.h"
+	"ScreenManager.h"
+	<SFML/Audio.hpp>
+	<fstream>
+	<vector>
+	<iostream>
+	<cstring>
+
