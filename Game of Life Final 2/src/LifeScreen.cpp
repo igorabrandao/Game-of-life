@@ -1,6 +1,7 @@
 #include "LifeScreen.h"
 
 const sf::Time LifeScreen::TimePerFrame = sf::seconds(0.5f);
+const sf::Time LifeScreen::TimePerFrameNormal = sf::seconds(1);
 
 LifeScreen::LifeScreen()
 {
@@ -73,7 +74,14 @@ LifeScreen::LoadContent()
     saveMessage.setStyle(sf::Text::Bold | sf::Text::Underlined);
     saveMessage.setCharacterSize(20);
 
-    sf::Time timeSinceLastUpdate = sf::Time::Zero;
+    outputFilename.setFont(font);
+    outputFilename.setString("");
+    outputFilename.setColor(sf::Color::Black);
+    outputFilename.setCharacterSize(20);
+
+
+    timeSinceLastUpdate = sf::Time::Zero;
+    timeSinceLastUpdateNormal = sf::Time::Zero;
 }
 
 
@@ -87,78 +95,103 @@ LifeScreen::UnloadContent()
 void
 LifeScreen::Update(sf::RenderWindow& window, sf::Event event)
 {
+    window.setKeyRepeatEnabled(false);
     sf::Time elapsedTime = clock.restart();
     timeSinceLastUpdate += elapsedTime;
-    while( timeSinceLastUpdate > TimePerFrame )
+    timeSinceLastUpdateNormal = timeSinceLastUpdate;
+    if((!isExtinct || isStable) ^ (isExtinct || !isStable) ^ (!isExtinct || !isStable))
     {
-        timeSinceLastUpdate -= TimePerFrame;
-        if(timeSinceLastUpdate.asSeconds() < TimePerFrame.asSeconds() )
+        while( timeSinceLastUpdate > TimePerFrame )
         {
-            if((!isExtinct || isStable) ^ (isExtinct || !isStable) ^ (!isExtinct || !isStable))
+            timeSinceLastUpdate -= TimePerFrame;
+            if(timeSinceLastUpdate.asSeconds() < TimePerFrame.asSeconds() )
             {
-
                 UpdateGeneration();
                 isStable = IsStabe();
                 isExtinct = IsExtinct();
                 /** Insere a nova geração no vetor de gerações */
                 generations.push_back(mMatriz);
             }
+                std::cout << timeSinceLastUpdate.asSeconds() << std::endl;
         }
-            std::cout << timeSinceLastUpdate.asSeconds() << std::endl;
+    }
+    else
+    {
+        SavingGame();
+
+        switch(event.type)
+        {
+            case sf::Event::KeyPressed:
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+                    tempString += 'a';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::B))
+                    tempString += 'b';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::C))
+                    tempString += 'c';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+                    tempString += 'd';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::E))
+                    tempString += 'e';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::F))
+                    tempString += 'f';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::G))
+                    tempString += 'g';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::H))
+                    tempString += 'h';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::I))
+                    tempString += 'i';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::J))
+                    tempString += 'j';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::K))
+                    tempString += 'k';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::L))
+                    tempString += 'l';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::M))
+                    tempString += 'm';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::N))
+                    tempString += 'n';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::O))
+                    tempString += 'o';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::P))
+                    tempString += 'p';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
+                    tempString += 'q';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::R))
+                    tempString += 'r';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+                    tempString += 's';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::T))
+                    tempString += 't';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::U))
+                    tempString += 'u';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::V))
+                    tempString += 'v';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+                    tempString += 'w';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::X))
+                    tempString += 'x';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Y))
+                    tempString += 'y';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
+                    tempString += 'z';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Period))
+                    tempString += '.';
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace))
+                {
+                    if( tempString.length() > 0)
+                        tempString = tempString.substr(0, tempString.length() - 1 );
+                }
+                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Return) || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+                {
+                    SaveOutputFile(window);
+                    window.close();
+                }
+                break;
+        }
     }
 
-
-    //switch(event.type)
-    //{
-
-
-
-        //case sf::Event::KeyPressed:
-        /*
-        if(time.asSeconds() < 3.0f)
-        {
-            if((!isExtinct || isStable) ^ (isExtinct || !isStable) ^ (!isExtinct || !isStable))
-            {
-
-                UpdateGeneration();
-                isStable = IsStabe();
-                /** Insere a nova geração no vetor de gerações */
-          /*      generations.push_back(mMatriz);
-
-                isExtinct = IsExtinct();
-                std::cout << "isStable = " << isStable << "isExtinct = "<< isExtinct << std::endl;
-            }
-            time += clock.restart();
-         }
-         clock.restart();
-            //break;
-        //case sf::Event::TextEntered:
-                //std::cout << "oi\n";
-            //break;
-                //SavingGame();
-                //std::cout << "oi\n";
-                //switch( event.type )
-                //{
-                  //  case sf::Event::TextEntered:
-                    //    if( event.text.unicode >= 32 && event.text.unicode < 127 )
-                      //  {
-                        //    std::cout << "oi\n";
-                          //  tempString += (char)event.text.unicode;
-                            //flag = true;
-                        //}
-                        //else if( event.text.unicode == 8 ) /** Backspace*/
-                        //{
-                          //  if ( tempString.length() > 0)
-                            //    tempString = tempString.substr(0, tempString.length() - 1 );
-                                //flag = false;
-                        //}
-                        //else if( event.text.unicode == 13) /** Enter key*/
-                        //{
-                          //  SaveOutputFile();
-                            //window.close();
-                        //}
-    //}
 }
+
 
 
 void
@@ -172,6 +205,7 @@ LifeScreen::Draw(sf::RenderWindow& window)
     window.draw(mGameStatus);
     window.draw(textbox);
     window.draw(saveMessage);
+    window.draw(outputFilename);
 }
 
 
@@ -568,6 +602,9 @@ LifeScreen::SavingGame()
     textbox.setPosition(sf::Vector2f((screenWidth / 2) - ( textbox.getGlobalBounds().width / 2) , 450));
     saveMessage.setString("Digite o nome do arquivo de saida e digite enter:");
     saveMessage.setPosition(sf::Vector2f((screenWidth / 2) - ( saveMessage.getGlobalBounds().width / 2) , 410));
+    outputFilename.setString(tempString);
+    outputFilename.setPosition(sf::Vector2f((screenWidth / 2) - ( outputFilename.getGlobalBounds().width / 2) , 450));
+
 }
 
 
@@ -594,6 +631,41 @@ LifeScreen::CompareVectors(std::vector<char> _vectorA, std::vector<char> _vector
 
 
 void
-LifeScreen::SaveOutputFile()
+LifeScreen::SaveOutputFile(sf::RenderWindow& window)
 {
+    std::ofstream ofs;
+    std::ostringstream oss;
+
+    std::string localFile = "assets/data/" + tempString;
+
+    ofs.open(localFile);
+
+    if(!ofs.is_open())
+    {
+        std::cout << "Error opening out.txt file!!!" << std::endl;
+        std::cout << "Closing the program..." << std::endl;
+        window.close();
+    }
+    else
+    {
+        std::cout << ">>>> Saving file..." << std::endl;
+
+        oss << nRows << " " << nCols << "\n";
+        oss << cLive << "\n";
+
+        for( auto i(0); i < nRows; ++i )
+        {
+            for( auto j(0); j < nCols; ++j)
+            {
+                oss << mMatriz[ i * nCols + j ];
+            }
+            oss << "\n";
+        }
+
+        std::string s = oss.str();
+
+        ofs << s;
+        std::cout << "Output operation successfully performed\n";
+        ofs.close();
+    }
 }

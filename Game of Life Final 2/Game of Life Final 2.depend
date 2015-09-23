@@ -60,7 +60,7 @@
 	"ScreenManager.h"
 	<sstream>
 
-1442962198 /home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/include/LifeScreen.h
+1442969861 /home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/include/LifeScreen.h
 	"GameScreen.h"
 	"ScreenManager.h"
 	<SFML/Audio.hpp>
@@ -81,10 +81,10 @@
 1442957475 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/Animation.cpp
 	"Animation.h"
 
-1442957194 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/ConfigScreen.cpp
+1442969530 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/ConfigScreen.cpp
 	"ConfigScreen.h"
 
-1442957377 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/FadeAnimation.cpp
+1442970380 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/FadeAnimation.cpp
 	"FadeAnimation.h"
 
 1442956823 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/FileManager.cpp
@@ -97,7 +97,7 @@
 1442956738 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/InputManager.cpp
 	"InputManager.h"
 
-1442962992 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/LifeScreen.cpp
+1442970050 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/LifeScreen.cpp
 	"LifeScreen.h"
 
 1442957114 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/MenuManager.cpp

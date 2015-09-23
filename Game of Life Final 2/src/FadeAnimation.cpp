@@ -23,7 +23,7 @@ void FadeAnimation::LoadContent( std::string text, sf::Texture &image, sf::Vecto
 {
 	Animation::LoadContent(text, image, position);
 	increase = false;
-	fadeSpeed = 0.4f;
+	fadeSpeed = 0.8f;
 }
 
 /********************************************//**
@@ -39,14 +39,8 @@ void FadeAnimation::UnloadContent()
 ***********************************************/
 void FadeAnimation::Update( sf::RenderWindow &Window )
 {
-	//sf::Time dt = clock.restart();
 	if ( active )
 	{
-		/*if ( !increase )
-			alpha -= dt.asSeconds() * fadeSpeed;
-		else
-			alpha += dt.asSeconds() * fadeSpeed;*/
-
 		if ( !increase )
 			alpha -= 0.02 * fadeSpeed;
 		else

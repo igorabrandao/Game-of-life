@@ -87,45 +87,6 @@ ConfigScreen::HandleInput(sf::RenderWindow& window, sf::Event event)
         case sf::Event::KeyReleased:
             flag = false;
             break;
-            //if (event.text.unicode != 8 )
-            //{
-                //std::cout << event.text.unicode << std::endl;
-              //  tempString += event.text.unicode;
-            //}
-            //else
-            //{
-                //if ( tempString.length() > 0)
-              //          tempString = tempString.substr(0, tempString.length() - 1 );
-            //}
-
-            /*
-            switch(event.key.code)
-            {
-                case sf::Event::TextEntered:
-                    std::cout << event.text.unicode << std::endl;
-                    break;
-
-                case sf::Keyboard::A:
-                    if(event.key.shift || event.key.system)
-                        tempString += 'A';
-                    else
-                        tempString += 'a';
-                    break;
-                case sf::Keyboard::Dash:
-                    if(event.key.shift || event.key.system)
-                        tempString += 'b';
-                    else
-                        tempString += 'b';
-                    break;
-
-                    case sf::Keyboard::BackSpace:
-                    if ( tempString.length() > 0)
-                        tempString = tempString.substr(0, tempString.length() - 1 );
-                    break;
-
-            }
-            */
-
     }
     text.setString(tempString);
     filename = tempString;

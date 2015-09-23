@@ -31,17 +31,20 @@ class LifeScreen : public GameScreen
         bool IsExtinct();
         bool CompareVectors(std::vector<char> _vectorA, std::vector<char> _vectorB);
         void SavingGame();
-        void SaveOutputFile();
+        void SaveOutputFile(sf::RenderWindow& window);
 
     private:
         static const sf::Time TimePerFrame;
+        static const sf::Time TimePerFrameNormal;
 
         sf::Time timeSinceLastUpdate;
+        sf::Time timeSinceLastUpdateNormal;
 
         sf::Font font;
         sf::Text mGameStatus;
         sf::Text textTyped;
         sf::Text saveMessage;
+        sf::Text outputFilename;
 
         sf::Texture emptyCellTexture;
         sf::Texture virusTexture;
@@ -63,6 +66,7 @@ class LifeScreen : public GameScreen
         int                     numChanges;
         bool                    isExtinct;
         bool                    isStable;
+        bool                    flag;
         sf::RectangleShape      textbox;
 
         std::vector<std::vector<char>> generations;
