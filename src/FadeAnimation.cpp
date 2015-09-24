@@ -1,3 +1,7 @@
+/*! \brief FadeAnimation.cpp.
+ *
+ *  Implements the fade animation.
+*/
 #include "FadeAnimation.h"
 
 /********************************************//**

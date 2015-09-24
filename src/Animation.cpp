@@ -1,7 +1,7 @@
-/*! \brief Class Animation.h.
+/*! \brief Animation.cpp.
  *
- *  Handle with all game's animation.
- */
+ *  Implements the game animations.
+*/
 #include "Animation.h"
 
 /********************************************//**
@@ -46,7 +46,7 @@ Animation::LoadContent( std::string text, sf::Texture &image, sf::Vector2f posit
 void 
 Animation::UnloadContent()
 {
-
+	/* Empty */
 }
 
 /********************************************//**
@@ -55,7 +55,7 @@ Animation::UnloadContent()
 void 
 Animation::Update( sf::RenderWindow &Window )
 {
-
+	/* Empty */
 }
 
 /********************************************//**

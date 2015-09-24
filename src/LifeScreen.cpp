@@ -1,39 +1,56 @@
+/*! \brief LifeScreen.cpp.
+ *
+ *  Implements the game engine.
+*/
 #include "LifeScreen.h"
 
+/*! Constants */
 const sf::Time LifeScreen::TimePerFrame = sf::seconds(0.5f);
 const sf::Time LifeScreen::TimePerFrameNormal = sf::seconds(1);
 
+/****************************************************************************************//**
+* \SCREEN AND GAME METHODS
+*******************************************************************************************/
+
+/********************************************//**
+* \class constructor
+***********************************************/
 LifeScreen::LifeScreen()
 {
-    //ctor
+    /* Empty */
 }
 
+/********************************************//**
+* \class destructor
+***********************************************/
 LifeScreen::~LifeScreen()
 {
-    //dtor
+    /* Empty */
 }
 
-
+/********************************************//**
+* \content loader
+***********************************************/
 void
 LifeScreen::LoadContent()
 {
     /** Load Resources */
-    if(!emptyCellTexture.loadFromFile("assets/images/life/emptyCell20x20.png"))
+    if ( !emptyCellTexture.loadFromFile("assets/images/life/emptyCell20x20.png"))
         throw "Cound not find emptyCell20x20.png!!!";
     else
         emptyCellSprite.setTexture(emptyCellTexture);
 
-    if(!virusTexture.loadFromFile("assets/images/life/virus20x20.png"))
+    if ( !virusTexture.loadFromFile("assets/images/life/virus20x20.png"))
         throw "Could not find virus20x20.png!!!";
     else
         virusSprite.setTexture(virusTexture);
 
-    if(!buffer.loadFromFile("assets/sounds/wallpaper.ogg"))
+    if ( !buffer.loadFromFile("assets/sounds/wallpaper.ogg"))
         throw "Could not find wallpaper.ogg";
     else
         sound.setBuffer(buffer);
 
-    if(!font.loadFromFile("assets/fonts/lora.ttf"))
+    if ( !font.loadFromFile("assets/fonts/lora.ttf"))
     {
         // Handle error.
     }
@@ -84,14 +101,18 @@ LifeScreen::LoadContent()
     timeSinceLastUpdateNormal = sf::Time::Zero;
 }
 
-
+/********************************************//**
+* \content unloader
+***********************************************/
 void
 LifeScreen::UnloadContent()
 {
-
+    /* Empty */
 }
 
-
+/********************************************//**
+* \update animation
+***********************************************/
 void
 LifeScreen::Update(sf::RenderWindow& window, sf::Event event)
 {
@@ -99,12 +120,12 @@ LifeScreen::Update(sf::RenderWindow& window, sf::Event event)
     sf::Time elapsedTime = clock.restart();
     timeSinceLastUpdate += elapsedTime;
     timeSinceLastUpdateNormal = timeSinceLastUpdate;
-    if((!isExtinct || isStable) ^ (isExtinct || !isStable) ^ (!isExtinct || !isStable))
+    if ( (!isExtinct || isStable) ^ (isExtinct || !isStable) ^ (!isExtinct || !isStable))
     {
         while( timeSinceLastUpdate > TimePerFrame )
         {
             timeSinceLastUpdate -= TimePerFrame;
-            if(timeSinceLastUpdate.asSeconds() < TimePerFrame.asSeconds() )
+            if ( timeSinceLastUpdate.asSeconds() < TimePerFrame.asSeconds() )
             {
                 UpdateGeneration();
                 isStable = IsStabe();
@@ -117,88 +138,96 @@ LifeScreen::Update(sf::RenderWindow& window, sf::Event event)
     }
     else
     {
+        /*! Save the game */
         SavingGame();
 
+        /*! Check the wich kind of key'll be pressed */
         switch(event.type)
         {
+            /*! Key pressed */
             case sf::Event::KeyPressed:
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::A) )
                     tempString += 'a';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::B))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::B) )
                     tempString += 'b';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::C))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::C) )
                     tempString += 'c';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::D) )
                     tempString += 'd';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::E))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::E) )
                     tempString += 'e';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::F))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::F) )
                     tempString += 'f';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::G))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::G) )
                     tempString += 'g';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::H))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::H) )
                     tempString += 'h';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::I))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::I) )
                     tempString += 'i';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::J))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::J) )
                     tempString += 'j';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::K))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::K) )
                     tempString += 'k';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::L))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::L) )
                     tempString += 'l';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::M))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::M) )
                     tempString += 'm';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::N))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::N) )
                     tempString += 'n';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::O))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::O) )
                     tempString += 'o';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::P))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::P) )
                     tempString += 'p';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::Q) )
                     tempString += 'q';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::R))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::R) )
                     tempString += 'r';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::S) )
                     tempString += 's';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::T))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::T) )
                     tempString += 't';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::U))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::U) )
                     tempString += 'u';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::V))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::V) )
                     tempString += 'v';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::W) )
                     tempString += 'w';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::X))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::X) )
                     tempString += 'x';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Y))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::Y) )
                     tempString += 'y';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::Z) )
                     tempString += 'z';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Period))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::Period) )
                     tempString += '.';
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace) )
                 {
-                    if( tempString.length() > 0)
+                    if (  tempString.length() > 0)
                         tempString = tempString.substr(0, tempString.length() - 1 );
                 }
-                if(sf::Keyboard::isKeyPressed(sf::Keyboard::Return) || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+                if ( sf::Keyboard::isKeyPressed(sf::Keyboard::Return) || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
                 {
                     SaveOutputFile(window);
                     window.close();
                 }
+                break;
+
+            /*! Default case */
+            default:  
                 break;
         }
     }
 
 }
 
-
-
+/********************************************//**
+* \render the elements
+***********************************************/
 void
 LifeScreen::Draw(sf::RenderWindow& window)
 {
     /** Print the grid on the screen */
-	for( auto i(0); i < grid.size() ; ++i )
+	for ( unsigned int i = 0; i < grid.size() ; ++i )
     {
         window.draw( grid[i]);
     }
@@ -208,18 +237,49 @@ LifeScreen::Draw(sf::RenderWindow& window)
     window.draw(outputFilename);
 }
 
+/****************************************************************************************//**
+* \SUPPORT METHODS
+*******************************************************************************************/
 
+/********************************************//**
+* \filename loader
+***********************************************/
+void
+LifeScreen::LoadFilename()
+{
+    /*! Read input file */
+    std::ifstream ifsIn("config.txt");
+
+    /*! Used to extract data of string read from input file */
+    std::istringstream iss;
+    std::string sLine;          /*!< Store a line from input file */
+
+    if ( !ifsIn.is_open() )
+    {
+        /** Show message error */
+        std::cout << "Erro opening file" << std::endl;
+    }   
+    else
+    {
+        /** Read the number of rows ands cols */
+        ifsIn >> filename;
+    }
+}
+
+/********************************************//**
+* \config loader
+***********************************************/
 void
 LifeScreen::LoadConfig()
 {
-    //! Input stream do arquivo de entrada gravado na tela de configuracao .
+    /*! Read the input file from config screen */
     std::ifstream ifstreamConfig("config.txt");
 
-    /** Usado para extrair dados da string lida do arquivo de entrada. */
+    /*! Used to extract data of string read from input file */
     std::istringstream issstring;
-    //std::string strLine;                   //! Armazena uma linha do arquivo de entrada.
+    //std::string strLine;          /*!< Store a line from input file */
 
-     if(!ifstreamConfig.is_open())
+    if ( !ifstreamConfig.is_open() )
     {
         /** Show message error */
         std::cout << "Erro opening file" << std::endl;
@@ -230,37 +290,38 @@ LifeScreen::LoadConfig()
         ifstreamConfig >> filename;
     }
 
-    //! Input stream do arquivo de entrada.
+    /*! Read input file */
     std::ifstream ifsIn("assets/data/" + filename);
 
-    /** Usado para extrair dados da string lida do arquivo de entrada. */
+    /*! Used to extract data of string read from input file */
     std::istringstream iss;
-    std::string sLine;                   //! Armazena uma linha do arquivo de entrada.
-    char cTemp;                     //! Char temporario para fazer o preencimento da matriz.
+    std::string sLine;              /*!< Store a line from input file */
+    char cTemp;                     /*!< Temporary char to fill the matrix */
 
-     if(!ifsIn.is_open())
+    /*! Check if the file is open */
+    if ( !ifsIn.is_open() )
     {
-        /** Show message error */
+        /** Message error */
         std::cout << "Erro opening file" << std::endl;
     }
     else
     {
-        /** Read the number of rows ands cols */
+        /*! Read the number of rows ands cols */
         ifsIn >> nRows;
         ifsIn >> nCols;
 
-        /** Lê o caractere usado como simbolo de celula viva */
+        /*! Read the character wich represent the alive cell */
         ifsIn >> cLive;
 
-        /* Carrega a matriz com seus elementos.*/
-        for(auto i(0); i < nRows; ++i)
+        /*! Load the matrix with cells */
+        for ( auto i(0); i < nRows; ++i )
         {
-            for(auto j(0); j < nCols; ++j)
+            for ( auto j(0); j < nCols; ++j )
             {
                 ifsIn >> cTemp;
-
                 mMatriz.push_back(cTemp);
-                // Preenche também a matriz auxiliar de forma que ela contenha os mesmos tamanho da matriz original.
+
+                /*! Fill an auxiliary matrix to be identical with the original one  */
                 mMatrizAux.push_back(cTemp);
             }
         }
@@ -268,67 +329,130 @@ LifeScreen::LoadConfig()
 
 }
 
-
+/********************************************//**
+* \grid position definer
+***********************************************/
 void
 LifeScreen::SetGridPosition()
 {
     /** Set the position of the grid */
     gridPosition.x = (screenWidth  / 2) - ((nCols/2) * 20);
     gridPosition.y = (screenHeight / 2) - ((nRows/2) * 20);
+
     for ( auto i(0); i < nRows; ++i )
     {
         for ( auto j(0); j < nCols; ++j )
         {
-            grid[ i * nCols + j ].setPosition(gridPosition);        // Seta a posição que sera imprimida na tela.
-            gridPosition.x = gridPosition.x + 20.f;                 // Atualiza a cordenada do x
+            grid[ i * nCols + j ].setPosition(gridPosition);        /*!< Set the position that'll be printed */
+            gridPosition.x = gridPosition.x + 20.f;                 /*!< Update x coordinate */
         }
 
-        gridPosition.x = (screenWidth  / 2) - ((nCols/2) * 20);     // X volta a coordenada original a cada pulo de linha
-        gridPosition.y = gridPosition.y + 20.f;                     // Atualiza a cordenada do x
+        gridPosition.x = (screenWidth  / 2) - ((nCols/2) * 20);     /*!< X restarts to original coordinate in each line jump */
+        gridPosition.y = gridPosition.y + 20.f;                     /*!< Update x coordinate */
 
     }
 }
 
-
+/********************************************//**
+* \grid sprites updater
+***********************************************/
 void
-LifeScreen::LoadFilename()
+LifeScreen::UpdateGridSprites()
 {
-    //! Input stream do arquivo de entrada.
-    std::ifstream ifsIn("config.txt");
-
-    /** Usado para extrair dados da string lida do arquivo de entrada. */
-    std::istringstream iss;
-    std::string sLine;                   //! Armazena uma linha do arquivo de entrada.
-
-     if(!ifsIn.is_open())
+    for ( auto i(0); i < ( nRows * nCols ); ++i )
     {
-        /** Show message error */
-        std::cout << "Erro opening file" << std::endl;
+        if ( mMatriz[ i ] == cLive )
+            grid[ i ] = virusSprite;
+        else
+            grid[ i ] = emptyCellSprite;
     }
-    else
-    {
-        /** Read the number of rows ands cols */
-        ifsIn >> filename;
-    }
+
+    SetGridPosition();
 }
 
+/****************************************************************************************//**
+* \ENGINE METHODS
+*******************************************************************************************/
 
+/********************************************//**
+* \check if the generation is stable
+***********************************************/
+bool
+LifeScreen::IsStabe()
+{
+    for( unsigned int i = 0; i < generations.size(); ++i )
+    {
+        std::cout << "<<< I'm stable in [" << generations.size() << "]" << std::endl;
+
+        if ( CompareVectors(mMatriz, generations[i]) )
+        {
+            mGameStatus.setString("Generation Estabilized!!!");
+            mGameStatus.setPosition( (screenWidth / 2) - (mGameStatus.getGlobalBounds().width / 2) , screenHeight / 2 );
+            mGameStatus.setColor(sf::Color::Red);
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/********************************************//**
+* \check if the generation is extinct
+***********************************************/
+bool
+LifeScreen::IsExtinct()
+{
+    bool isExtinct = true;
+
+    for ( auto i(0) ; i < ( nCols * nRows) ; ++i )
+    {
+        if (  mMatriz[ i ] == cLive )
+        {
+            isExtinct = false;
+            return  isExtinct;
+        }
+    }
+
+    /*! If all cells have died */
+    mGameStatus.setString("Generation extinct!!!");
+    mGameStatus.setColor(sf::Color::Blue);
+    mGameStatus.setPosition( (screenWidth / 2) - (mGameStatus.getGlobalBounds().width / 2) , screenHeight / 2 );
+    return isExtinct;
+}
+
+/********************************************//**
+* \game saver
+***********************************************/
+void
+LifeScreen::SavingGame()
+{
+    textbox.setSize(sf::Vector2f(400,30));
+    textbox.setPosition(sf::Vector2f((screenWidth / 2) - ( textbox.getGlobalBounds().width / 2) , 450));
+    saveMessage.setString("Digite o nome do arquivo de saida e digite enter:");
+    saveMessage.setPosition(sf::Vector2f((screenWidth / 2) - ( saveMessage.getGlobalBounds().width / 2) , 410));
+    outputFilename.setString(tempString);
+    outputFilename.setPosition(sf::Vector2f((screenWidth / 2) - ( outputFilename.getGlobalBounds().width / 2) , 450));
+}
+
+/********************************************//**
+* \generation updater
+***********************************************/
 void
 LifeScreen::UpdateGeneration()
 {
-    // Contador de vizinhos vivos.
+    /*! Counter of the alive neighbor */
     int liveNeighbors = 0;
     char cellState;
 
-    for(auto linha(0); linha < nRows; ++linha)
+    for ( auto linha(0); linha < nRows; ++linha )
     {
-        for(auto coluna(0); coluna < nCols; ++coluna)
+        for ( auto coluna(0); coluna < nCols; ++coluna )
         {
-            //Se for alguma posição do topo.
-            if(linha == 0)
+            /*! If it's top position */
+            if ( linha == 0 )
             {
                 //se for do top e da esquerda
-                if(coluna == 0)
+                if ( coluna == 0)
                 {
                     // Verifica se a celula esta viva ou morta.
                     cellState = mMatriz[ linha * nCols + coluna];
@@ -344,7 +468,7 @@ LifeScreen::UpdateGeneration()
                     liveNeighbors = 0;
                 }
                 //se for do topo e da direita
-                else if(coluna == nCols - 1)
+                else if ( coluna == nCols - 1)
                 {
                     // Verifica se a celula esta viva ou morta.
                     cellState = mMatriz[ linha * nCols + coluna ];
@@ -381,7 +505,7 @@ LifeScreen::UpdateGeneration()
                 }
             }
             // Se for alguma posição da borda esquerda (menos topo e bottom)
-            else if( coluna == 0 && linha != 0 && linha != nRows - 1 )
+            else if (  coluna == 0 && linha != 0 && linha != nRows - 1 )
             {
                 // Verifica se a celula esta viva ou morta.
                 cellState = mMatriz[ linha * nCols + coluna ];
@@ -401,7 +525,7 @@ LifeScreen::UpdateGeneration()
                 liveNeighbors = 0;
             }
             // Se for alguma posição da borda direita (menos topo e bottom)
-            else if( coluna == nCols - 1 && linha != 0 && linha != nRows - 1)
+            else if (  coluna == nCols - 1 && linha != 0 && linha != nRows - 1)
             {
                 // Verifica se a celula esta viva ou morta.
                 cellState = mMatriz[ linha * nCols + coluna ];
@@ -421,7 +545,7 @@ LifeScreen::UpdateGeneration()
                 liveNeighbors = 0;
             }
             // Se for alguma posição do bottom
-            else if( linha == nRows - 1)
+            else if (  linha == nRows - 1)
             {
                 // Se for do botorm e da esquerda
                 if ( coluna == 0 )
@@ -510,7 +634,7 @@ LifeScreen::UpdateGeneration()
     {
         for(auto j(0); j < nCols; ++j)
         {
-            if(mMatriz[i * nCols + j] != mMatrizAux[i * nCols + j] )
+            if ( mMatriz[i * nCols + j] != mMatrizAux[i * nCols + j] )
                 numChanges++;
             mMatriz[i * nCols + j] = mMatrizAux[i * nCols + j];
         }
@@ -518,23 +642,22 @@ LifeScreen::UpdateGeneration()
 
     /** Atualiza os sprites do tabuleiro */
     UpdateGridSprites();
-
 }
 
 
 char
 LifeScreen::SetAlive(char _cellState, int _liveNeighbors, char _cLive)
 {
-    // Rule number 1
+    /*! Rule number 1 */
     if (_cellState == _cLive && _liveNeighbors <= 1)
         return '.';
-    // Rule number 2
+    /*! Rule number 2 */
     else if (_cellState == _cLive && _liveNeighbors >= 4)
         return '.';
-    // Rule number 3
+    /*! Rule number 3 */
     else if (_cellState == _cLive && (_liveNeighbors == 2 || _liveNeighbors == 3))
         return _cLive;
-    // Rule number 4
+    /*! Rule number 4 */
     else if (_cellState != _cLive && _liveNeighbors == 3)
         return _cLive;
 
@@ -542,82 +665,24 @@ LifeScreen::SetAlive(char _cellState, int _liveNeighbors, char _cLive)
 }
 
 
-void
-LifeScreen::UpdateGridSprites()
-{
-    for ( auto i(0); i < ( nRows * nCols ) ; ++i )
-    {
-        if ( mMatriz[ i ] == cLive )
-            grid[ i ] = virusSprite;
-        else
-            grid[ i ] = emptyCellSprite;
-    }
-    SetGridPosition();
-}
 
 
-bool
-LifeScreen::IsStabe()
-{
-    for( auto i(0); i < generations.size(); ++i )
-    {
-        std::cout << "Entrei dentro do is stabe" << generations.size() <<std::endl;
-        if( CompareVectors(mMatriz, generations[i]))
-        {
-            mGameStatus.setString("Generation Estabilized!!!");
-            mGameStatus.setPosition( (screenWidth / 2) - (mGameStatus.getGlobalBounds().width / 2) , screenHeight / 2 );
-            mGameStatus.setColor(sf::Color::Red);
-            return true;
-        }
-    }
-    return false;
-}
 
 
-bool
-LifeScreen::IsExtinct()
-{
-    bool isExtinct = true;
-    for( auto i(0) ; i < ( nCols * nRows) ; ++i )
-    {
-        if( mMatriz[ i ] == cLive )
-        {
-            isExtinct = false;
-            return  isExtinct;
-        }
-    }
-
-    // Caso não exista nenhuma celula viva
-    mGameStatus.setString("Generation extinct!!!");
-    mGameStatus.setColor(sf::Color::Blue);
-    mGameStatus.setPosition( (screenWidth / 2) - (mGameStatus.getGlobalBounds().width / 2) , screenHeight / 2 );
-    return isExtinct;
-}
 
 
-void
-LifeScreen::SavingGame()
-{
-    textbox.setSize(sf::Vector2f(400,30));
-    textbox.setPosition(sf::Vector2f((screenWidth / 2) - ( textbox.getGlobalBounds().width / 2) , 450));
-    saveMessage.setString("Digite o nome do arquivo de saida e digite enter:");
-    saveMessage.setPosition(sf::Vector2f((screenWidth / 2) - ( saveMessage.getGlobalBounds().width / 2) , 410));
-    outputFilename.setString(tempString);
-    outputFilename.setPosition(sf::Vector2f((screenWidth / 2) - ( outputFilename.getGlobalBounds().width / 2) , 450));
-
-}
 
 
 bool
 LifeScreen::CompareVectors(std::vector<char> _vectorA, std::vector<char> _vectorB)
 {
     // Se o tamanho dos vetores forem iguais;
-    if(_vectorA.size() == _vectorB.size())
+    if ( _vectorA.size() == _vectorB.size())
     {
-        for(auto i(0); i < _vectorA.size(); ++i )
+        for ( unsigned int i = 0; i < _vectorA.size(); ++i )
         {
             // Se houver ao menos 1 elemento diferente o vetor será diferente
-            if(_vectorA[i] != _vectorB[i] )
+            if ( _vectorA[i] != _vectorB[i] )
                 return false;
         }
     }
@@ -640,7 +705,7 @@ LifeScreen::SaveOutputFile(sf::RenderWindow& window)
 
     ofs.open(localFile);
 
-    if(!ofs.is_open())
+    if ( !ofs.is_open())
     {
         std::cout << "Error opening out.txt file!!!" << std::endl;
         std::cout << "Closing the program..." << std::endl;
