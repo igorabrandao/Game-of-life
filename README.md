@@ -1,3 +1,9 @@
+
+```
+#!c++
+
+
+```
 # README #
 
 **Visão Geral**
@@ -20,21 +26,31 @@ Igor A. Brandão e Leandro Antonio F. da Silva
 
 **Como compilar**
 
-Use o makefile digitando o comando 'make' pelo terminal, após ter navegado para a pasta do projeto.
+Use o makefile digitando o comando **'make'** pelo terminal, após ter navegado para a pasta do projeto.
 
 
 **Informações adicionais**
 
 Buscamos utilizar uma estrutura mais rebuscada para o jogo como um todo, realizando o gerenciamento da plataforma em classes responsáveis por gerenciar elementos distintos do jogo, separadas da seguinte maneira:
 
-Animation.h => Gerencia os efeitos de transição entre tela (fade, scroll, zoom).
-ConfigScreen.h => Trata os elementos visuais do jogo, assim como a atualização destes.
-FadeAnimation.h => Classe responsável pelo efeito fade.
-FileManager.h => Gerencia a manipulação de arquivos (leitura das configurações).
-GameScreen.h => Lida com instâncias genéricas e reutilizáveis do projeto.
-InputManager.h => Gerencia eventos de entrada de teclado e outros periféricos.
-LifeScreen.h (Principal) => Trata os elementos que envolvem a mecânica da simulação.
-MenuManager.h => Gera o menu do jogo de acordo com o arquivo de configuração.
-ScreenManager.h => Principal classe do jogo que gerencia a criação de todas as telas através do método AddScreen com GetInstance.
-SplashScreen.h => Cria a apresentação inicial do jogo.
-TitleScreen.h => Tela base que através do MenuManager faz a geração do menu inicial.
+**Animation.h** => Gerencia os efeitos de transição entre tela (fade, scroll, zoom).
+
+**ConfigScreen.h** => Trata os elementos visuais do jogo, assim como a atualização destes.
+
+**FadeAnimation.h** => Classe responsável pelo efeito fade.
+
+**FileManager.h** => Gerencia a manipulação de arquivos (leitura das configurações).
+
+**GameScreen.h** => Lida com instâncias genéricas e reutilizáveis do projeto.
+
+**InputManager.h** => Gerencia eventos de entrada de teclado e outros periféricos.
+
+**LifeScreen.h (Principal)** => Trata os elementos que envolvem a mecânica da simulação.
+
+**MenuManager.h** => Gera o menu do jogo de acordo com o arquivo de configuração.
+
+**ScreenManager.h** => Gerencia a criação de todas as telas através do método AddScreen com GetInstance.
+
+**SplashScreen.h** => Cria a apresentação inicial do jogo.
+
+**TitleScreen.h** => Tela base que através do MenuManager faz a geração do menu inicial.
