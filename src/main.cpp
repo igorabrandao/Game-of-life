@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// Constantes
+/*! Constants */
 const sf::Time TimePerFrame = sf::seconds( 1.f / 60.f );
 
 int main()

@@ -27,7 +27,8 @@ FileManager::~FileManager( void )
 /********************************************//**
 * \load file content
 ***********************************************/
-void FileManager::LoadContent( const char* filename,
+void 
+FileManager::LoadContent( const char* filename,
 		std::vector<std::vector<std::string>> &attributes,
 		std::vector<std::vector<std::string>> &contents)
 {

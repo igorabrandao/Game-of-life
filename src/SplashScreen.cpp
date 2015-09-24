@@ -19,7 +19,8 @@ SplashScreen::~SplashScreen()
 /********************************************//**
 * \load content on screen
 ***********************************************/
-void SplashScreen::LoadContent()
+void
+SplashScreen::LoadContent()
 {
 	imageNumber = 0;
 
@@ -34,7 +35,7 @@ void SplashScreen::LoadContent()
 	/* Keys that trigger the event */
 	keys.push_back(sf::Keyboard::Return);
 
-	file.LoadContent("assets/settings/splash.hell", attributes, contents);
+	file.LoadContent("assets/settings/splash.life", attributes, contents);
 
 	for ( int unsigned i = 0; i < attributes.size(); i++ )
 	{
@@ -58,7 +59,8 @@ void SplashScreen::LoadContent()
 /********************************************//**
 * \unload screen's content
 ***********************************************/
-void SplashScreen::UnloadContent()
+void
+SplashScreen::UnloadContent()
 {
 	GameScreen::UnloadContent();
 
@@ -73,7 +75,8 @@ void SplashScreen::UnloadContent()
 /********************************************//**
 * \update screen content
 ***********************************************/
-void SplashScreen::Update( sf::RenderWindow &Window, sf::Event event )
+void 
+SplashScreen::Update( sf::RenderWindow &Window, sf::Event event )
 {
 	input.Update( event );
 
@@ -92,7 +95,8 @@ void SplashScreen::Update( sf::RenderWindow &Window, sf::Event event )
 /********************************************//**
 * \print the screen content
 ***********************************************/
-void SplashScreen::Draw( sf::RenderWindow &Window )
+void 
+SplashScreen::Draw( sf::RenderWindow &Window )
 {
 	//Window.draw(text);
 	fade[imageNumber]->Draw(Window);

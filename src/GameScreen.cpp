@@ -19,7 +19,8 @@ GameScreen::~GameScreen()
 /********************************************//**
 * \load content on screen
 ***********************************************/
-void GameScreen::LoadContent()
+void 
+GameScreen::LoadContent()
 {
 
 }
@@ -27,7 +28,8 @@ void GameScreen::LoadContent()
 /********************************************//**
 * \unload screen's content
 ***********************************************/
-void GameScreen::UnloadContent()
+void 
+GameScreen::UnloadContent()
 {
 	keys.clear();
 	//input = NULL;
@@ -36,7 +38,8 @@ void GameScreen::UnloadContent()
 /********************************************//**
 * \update screen content
 ***********************************************/
-void GameScreen::Update( sf::RenderWindow &Window, sf::Event event )
+void 
+GameScreen::Update( sf::RenderWindow &Window, sf::Event event )
 {
 
 }
@@ -44,7 +47,8 @@ void GameScreen::Update( sf::RenderWindow &Window, sf::Event event )
 /********************************************//**
 * \print the screen content
 ***********************************************/
-void GameScreen::Draw( sf::RenderWindow &Window )
+void 
+GameScreen::Draw( sf::RenderWindow &Window )
 {
 
 }

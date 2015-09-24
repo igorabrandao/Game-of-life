@@ -24,7 +24,8 @@ ScreenManager::~ScreenManager()
 /********************************************//**
 * \generate new screen instance
 ***********************************************/
-void ScreenManager::Initialize()
+void 
+ScreenManager::Initialize()
 {
 	currentScreen = new SplashScreen();
 	transition = false;
@@ -35,7 +36,8 @@ void ScreenManager::Initialize()
 /********************************************//**
 * \screen's content loader
 ***********************************************/
-void ScreenManager::LoadContent()
+void 
+ScreenManager::LoadContent()
 {
 	currentScreen->LoadContent();
 
@@ -48,7 +50,8 @@ void ScreenManager::LoadContent()
 /********************************************//**
 * \screen's content unloader
 ***********************************************/
-void ScreenManager::Update( sf::RenderWindow &Window, sf::Event event )
+void 
+ScreenManager::Update( sf::RenderWindow &Window, sf::Event event )
 {
 	if ( !transition )
 		currentScreen->Update(Window, event);
@@ -58,7 +61,8 @@ void ScreenManager::Update( sf::RenderWindow &Window, sf::Event event )
 /********************************************//**
 * \print the content on screen
 ***********************************************/
-void ScreenManager::Draw( sf::RenderWindow &Window )
+void 
+ScreenManager::Draw( sf::RenderWindow &Window )
 {
 	currentScreen->Draw(Window);
 }
@@ -66,7 +70,8 @@ void ScreenManager::Draw( sf::RenderWindow &Window )
 /********************************************//**
 * \add a new screen
 ***********************************************/
-void ScreenManager::AddScreen( GameScreen *screen )
+void 
+ScreenManager::AddScreen( GameScreen *screen )
 {
 	// Set transition state as true
 	transition = true;
@@ -84,7 +89,8 @@ void ScreenManager::AddScreen( GameScreen *screen )
 /********************************************//**
 * \handle screen transition
 ***********************************************/
-void ScreenManager::Transition( sf::RenderWindow &Window )
+void 
+ScreenManager::Transition( sf::RenderWindow &Window )
 {
 	if ( transition )
 	{
@@ -109,7 +115,8 @@ void ScreenManager::Transition( sf::RenderWindow &Window )
 /********************************************//**
 * \get animation alpha value
 ***********************************************/
-float ScreenManager::GetAlpha()
+float 
+ScreenManager::GetAlpha()
 {
 	return fade.GetAlpha();
 }

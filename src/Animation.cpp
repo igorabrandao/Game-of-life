@@ -1,3 +1,7 @@
+/*! \brief Class Animation.h.
+ *
+ *  Handle with all game's animation.
+ */
 #include "Animation.h"
 
 /********************************************//**
@@ -10,7 +14,7 @@ Animation::Animation()
 
 /********************************************//**
 * \class destructor
-**********************************	*************/
+***********************************************/
 Animation::~Animation()
 {
 	/* Empty */
@@ -19,7 +23,8 @@ Animation::~Animation()
 /********************************************//**
 * \content loader
 ***********************************************/
-void Animation::LoadContent( std::string text, sf::Texture &image, sf::Vector2f position )
+void 
+Animation::LoadContent( std::string text, sf::Texture &image, sf::Vector2f position )
 {
 	this->preText = text;
 	this->image = image;
@@ -38,7 +43,8 @@ void Animation::LoadContent( std::string text, sf::Texture &image, sf::Vector2f 
 /********************************************//**
 * \content unloader
 ***********************************************/
-void Animation::UnloadContent()
+void 
+Animation::UnloadContent()
 {
 
 }
@@ -46,7 +52,8 @@ void Animation::UnloadContent()
 /********************************************//**
 * \update animation
 ***********************************************/
-void Animation::Update( sf::RenderWindow &Window )
+void 
+Animation::Update( sf::RenderWindow &Window )
 {
 
 }
@@ -54,7 +61,8 @@ void Animation::Update( sf::RenderWindow &Window )
 /********************************************//**
 * \render the animation
 ***********************************************/
-void Animation::Draw( sf::RenderWindow &Window )
+void 
+Animation::Draw( sf::RenderWindow &Window )
 {
 	std::string str = text.getString();
 
@@ -80,7 +88,8 @@ void Animation::Draw( sf::RenderWindow &Window )
 /********************************************//**
 * \get animation alpha value
 ***********************************************/
-float &Animation::GetAlpha()
+float 
+&Animation::GetAlpha()
 {
 	return alpha;
 }
@@ -88,7 +97,8 @@ float &Animation::GetAlpha()
 /********************************************//**
 * \get animation active
 ***********************************************/
-bool &Animation::GetActive()
+bool 
+&Animation::GetActive()
 {
 	return active;
 }
@@ -96,7 +106,8 @@ bool &Animation::GetActive()
 /********************************************//**
 * \get animation scale
 ***********************************************/
-float &Animation::GetScale()
+float 
+&Animation::GetScale()
 {
 	return scale;
 }
@@ -104,7 +115,8 @@ float &Animation::GetScale()
 /********************************************//**
 * \set animation alpha value
 ***********************************************/
-void Animation::SetAlpha( float value )
+void 
+Animation::SetAlpha( float value )
 {
 	alpha = value;
 }

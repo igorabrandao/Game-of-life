@@ -19,7 +19,8 @@ InputManager::~InputManager()
 /********************************************//**
 * \update event handler
 ***********************************************/
-void InputManager::Update( sf::Event event_ )
+void 
+InputManager::Update( sf::Event event_ )
 {
 	this->event = event_;
 }
@@ -27,7 +28,8 @@ void InputManager::Update( sf::Event event_ )
 /********************************************//**
 * \catch the pressed key event
 ***********************************************/
-bool InputManager::KeyPressed( int key_ )
+bool 
+InputManager::KeyPressed( int key_ )
 {
 	if ( event.key.code == key_ && event.type == sf::Event::KeyPressed )
 		return true;
@@ -37,7 +39,8 @@ bool InputManager::KeyPressed( int key_ )
 /********************************************//**
 * \catch the pressed key event
 ***********************************************/
-bool InputManager::KeyPressed( std::vector<int> keys_ )
+bool 
+InputManager::KeyPressed( std::vector<int> keys_ )
 {
 	for ( int i = 0; i < keys_.size(); i++ )
 	{
@@ -50,7 +53,8 @@ bool InputManager::KeyPressed( std::vector<int> keys_ )
 /********************************************//**
 * \catch the released key event
 ***********************************************/
-bool InputManager::KeyReleased( int key_ )
+bool 
+InputManager::KeyReleased( int key_ )
 {
 	if ( event.key.code == key_ && sf::Event::KeyReleased )
 		return true;
@@ -60,7 +64,8 @@ bool InputManager::KeyReleased( int key_ )
 /********************************************//**
 * \catch the released key event
 ***********************************************/
-bool InputManager::KeyReleased( std::vector<int> keys_ )
+bool 
+InputManager::KeyReleased( std::vector<int> keys_ )
 {
 	for ( int i = 0; i < keys_.size(); i++ )
 	{
@@ -73,7 +78,8 @@ bool InputManager::KeyReleased( std::vector<int> keys_ )
 /********************************************//**
 * \catch the key down event
 ***********************************************/
-bool InputManager::KeyDown( sf::RenderWindow &Window, sf::Keyboard::Key key_ )
+bool 
+InputManager::KeyDown( sf::RenderWindow &Window, sf::Keyboard::Key key_ )
 {
 	if ( sf::Keyboard::isKeyPressed(key_) )
 		return true;
@@ -83,7 +89,8 @@ bool InputManager::KeyDown( sf::RenderWindow &Window, sf::Keyboard::Key key_ )
 /********************************************//**
 * \catch the key down event
 ***********************************************/
-bool InputManager::KeyDown( sf::RenderWindow &Window, std::vector<sf::Keyboard::Key> keys_ )
+bool 
+InputManager::KeyDown( sf::RenderWindow &Window, std::vector<sf::Keyboard::Key> keys_ )
 {
 	for ( int i = 0; i < keys_.size(); i++ )
 	{

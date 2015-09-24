@@ -1,13 +1,17 @@
+/*! \brief Class Animation.h.
+ *
+ *  Handle with all game's animation.
+ */
 #include "ConfigScreen.h"
 
 ConfigScreen::ConfigScreen()
 {
-    //ctor
+    // Constructor
 }
 
 ConfigScreen::~ConfigScreen()
 {
-    //dtor
+    // Destructor
 }
 
 void

@@ -19,7 +19,8 @@ TitleScreen::~TitleScreen()
 /********************************************//**
 * \load content on screen
 ***********************************************/
-void TitleScreen::LoadContent()
+void
+TitleScreen::LoadContent()
 {
 	if ( !font.loadFromFile("assets/fonts/8-BIT_WONDER.TTF") )
 	{
@@ -38,7 +39,8 @@ void TitleScreen::LoadContent()
 /********************************************//**
 * \unload screen's content
 ***********************************************/
-void TitleScreen::UnloadContent()
+void
+TitleScreen::UnloadContent()
 {
 	GameScreen::UnloadContent();
 }
@@ -46,7 +48,8 @@ void TitleScreen::UnloadContent()
 /********************************************//**
 * \update screen content
 ***********************************************/
-void TitleScreen::Update( sf::RenderWindow &Window, sf::Event event )
+void
+TitleScreen::Update( sf::RenderWindow &Window, sf::Event event )
 {
 	input.Update( event );
 
@@ -101,7 +104,8 @@ void TitleScreen::Update( sf::RenderWindow &Window, sf::Event event )
 /********************************************//**
 * \print the screen content
 ***********************************************/
-void TitleScreen::Draw( sf::RenderWindow &Window )
+void
+TitleScreen::Draw( sf::RenderWindow &Window )
 {
 	//Window.draw( text );
 	menu.Draw(Window);

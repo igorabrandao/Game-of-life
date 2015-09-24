@@ -19,7 +19,8 @@ MenuManager::~MenuManager()
 /********************************************//**
 * \load menu content
 ***********************************************/
-void MenuManager::LoadContent( float width, float height )
+void 
+MenuManager::LoadContent( float width, float height )
 {
 	/*! Load screen fonts */
 	if ( !font.loadFromFile("assets/fonts/8-BIT_WONDER.TTF") )
@@ -71,7 +72,8 @@ void MenuManager::LoadContent( float width, float height )
 /********************************************//**
 * \draw menu content
 ***********************************************/
-void MenuManager::Draw( sf::RenderWindow &Window )
+void 
+MenuManager::Draw( sf::RenderWindow &Window )
 {
 	Window.draw(image);
 	for ( int i = 0; i < MAX_NUMBER_OF_ITEMS; i++ )
@@ -83,7 +85,8 @@ void MenuManager::Draw( sf::RenderWindow &Window )
 /********************************************//**
 * \move up on menu
 ***********************************************/
-void MenuManager::MoveUp()
+void 
+MenuManager::MoveUp()
 {
 	if ( selectedItemIndex - 1 >= 0 )
 	{
@@ -96,7 +99,8 @@ void MenuManager::MoveUp()
 /********************************************//**
 * \move down on menu
 ***********************************************/
-void MenuManager::MoveDown()
+void 
+MenuManager::MoveDown()
 {
 	if ( selectedItemIndex + 1 < MAX_NUMBER_OF_ITEMS )
 	{

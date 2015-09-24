@@ -19,7 +19,8 @@ FadeAnimation::~FadeAnimation(void)
 /********************************************//**
 * \content loader
 ***********************************************/
-void FadeAnimation::LoadContent( std::string text, sf::Texture &image, sf::Vector2f position )
+void 
+FadeAnimation::LoadContent( std::string text, sf::Texture &image, sf::Vector2f position )
 {
 	Animation::LoadContent(text, image, position);
 	increase = false;
@@ -29,7 +30,8 @@ void FadeAnimation::LoadContent( std::string text, sf::Texture &image, sf::Vecto
 /********************************************//**
 * \content unloader
 ***********************************************/
-void FadeAnimation::UnloadContent()
+void 
+FadeAnimation::UnloadContent()
 {
 
 }
@@ -37,7 +39,8 @@ void FadeAnimation::UnloadContent()
 /********************************************//**
 * \catch the pressed key event
 ***********************************************/
-void FadeAnimation::Update( sf::RenderWindow &Window )
+void 
+FadeAnimation::Update( sf::RenderWindow &Window )
 {
 	if ( active )
 	{
@@ -68,7 +71,8 @@ void FadeAnimation::Update( sf::RenderWindow &Window )
 /********************************************//**
 * \catch the pressed key event
 ***********************************************/
-void FadeAnimation::Draw( sf::RenderWindow &Window )
+void 
+FadeAnimation::Draw( sf::RenderWindow &Window )
 {
 	Animation::Draw(Window);
 }
@@ -76,7 +80,8 @@ void FadeAnimation::Draw( sf::RenderWindow &Window )
 /********************************************//**
 * \set animation alpha value
 ***********************************************/
-void FadeAnimation::SetAlpha( float value )
+void 
+FadeAnimation::SetAlpha( float value )
 {
 	alpha = value;
 
