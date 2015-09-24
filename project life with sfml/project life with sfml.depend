@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1442618572 source:/home/leandro/Dev/codeblock projects/project life with sfml/Main.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	"Game.hpp"
+
+1442628719 /home/leandro/Dev/codeblock projects/project life with sfml/include/Game.hpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<SFML/Audio/Music.hpp>
+	<iostream>
+	<vector>
+	<fstream>
+	<sstream>
+	<string>
+
+1442628796 source:/home/leandro/Dev/codeblock projects/project life with sfml/src/Game.cpp
+	<Game.hpp>
+	<StringHelpers.hpp>
+
+1442514394 /home/leandro/Dev/codeblock projects/project life with sfml/include/StringHelpers.hpp
+	<sstream>
+	<StringHelpers.inl>
+
+1442514367 /home/leandro/Dev/codeblock projects/project life with sfml/include/StringHelpers.inl
+

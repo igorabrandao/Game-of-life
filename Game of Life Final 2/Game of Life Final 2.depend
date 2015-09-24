@@ -1,0 +1,114 @@
+# depslib dependency file v1.0
+1442960020 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/main.cpp
+	<iostream>
+	<SFML/Graphics.hpp>
+	"ScreenManager.h"
+
+1442957491 /home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/include/ScreenManager.h
+	<iostream>
+	"GameScreen.h"
+	"SplashScreen.h"
+	"TitleScreen.h"
+	"FadeAnimation.h"
+	"FileManager.h"
+
+1442956582 /home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/include/GameScreen.h
+	<SFML/Graphics.hpp>
+	"InputManager.h"
+	"FileManager.h"
+
+1442956708 /home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/include/InputManager.h
+	<vector>
+	<SFML/Graphics.hpp>
+
+1442956795 /home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/include/FileManager.h
+	<vector>
+	<string>
+	<fstream>
+	<algorithm>
+	<iostream>
+	<sstream>
+
+1442956894 /home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/include/SplashScreen.h
+	"GameScreen.h"
+	"TitleScreen.h"
+	"ScreenManager.h"
+	"FadeAnimation.h"
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1442957017 /home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/include/TitleScreen.h
+	"GameScreen.h"
+	"ScreenManager.h"
+	"MenuManager.h"
+	"ConfigScreen.h"
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1442957091 /home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/include/MenuManager.h
+	<iostream>
+	<string>
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+
+1442957178 /home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/include/ConfigScreen.h
+	<string>
+	<iostream>
+	"GameScreen.h"
+	"InputManager.h"
+	"LifeScreen.h"
+	"ScreenManager.h"
+	<sstream>
+
+1442969861 /home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/include/LifeScreen.h
+	"GameScreen.h"
+	"ScreenManager.h"
+	<SFML/Audio.hpp>
+	<fstream>
+	<vector>
+	<iostream>
+	<cstring>
+
+1442957358 /home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/include/FadeAnimation.h
+	"Animation.h"
+	<iostream>
+
+1442957480 /home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/include/Animation.h
+	<string>
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1442957475 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/Animation.cpp
+	"Animation.h"
+
+1442969530 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/ConfigScreen.cpp
+	"ConfigScreen.h"
+
+1442970380 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/FadeAnimation.cpp
+	"FadeAnimation.h"
+
+1442956823 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/FileManager.cpp
+	"FileManager.h"
+	"FileManager.h"
+
+1442956631 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/GameScreen.cpp
+	"GameScreen.h"
+
+1442956738 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/InputManager.cpp
+	"InputManager.h"
+
+1442970050 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/LifeScreen.cpp
+	"LifeScreen.h"
+
+1442957114 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/MenuManager.cpp
+	"MenuManager.h"
+
+1442956513 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/ScreenManager.cpp
+	"ScreenManager.h"
+
+1442956917 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/SplashScreen.cpp
+	"SplashScreen.h"
+
+1442956992 source:/home/leandro/Dev/Master Coders BTI/game-of-life/Game of Life Final 2/src/TitleScreen.cpp
+	"TitleScreen.h"
+
