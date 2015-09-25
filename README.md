@@ -26,7 +26,9 @@ Use o makefile digitando o comando **'make'** pelo terminal, após ter navegado 
 
 **Como gerar a documentação**
 
-Use o comando **'doxygen Doxyfile'** pelo terminal, após ter navegado para a pasta do projeto (caso a pasta doc não estiver presente na raiz do projeto).
+Utilize o arquivo **'documentation.html'** para acessar diretamente a documentação.
+
+Caso a pasta doc não estiver presente na raíz do projeto, use o comando **'doxygen Doxyfile'** pelo terminal, após ter navegado para a pasta do projeto.
 
 **Informações adicionais**
 
