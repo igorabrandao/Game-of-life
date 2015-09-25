@@ -1,7 +1,11 @@
+/*! \brief Class GameScreen.cpp.
+ *
+ *  Implements the game screens.
+*/
 #include "GameScreen.h"
 
 /********************************************//**
-* \class constructor
+* constructor
 ***********************************************/
 GameScreen::GameScreen()
 {
@@ -9,7 +13,7 @@ GameScreen::GameScreen()
 }
 
 /********************************************//**
-* \class destructor
+* destructor
 ***********************************************/
 GameScreen::~GameScreen()
 {
@@ -17,7 +21,7 @@ GameScreen::~GameScreen()
 }
 
 /********************************************//**
-* \load content on screen
+* load content on screen
 ***********************************************/
 void 
 GameScreen::LoadContent()
@@ -26,7 +30,7 @@ GameScreen::LoadContent()
 }
 
 /********************************************//**
-* \unload screen's content
+* unload screen's content
 ***********************************************/
 void 
 GameScreen::UnloadContent()
@@ -36,7 +40,7 @@ GameScreen::UnloadContent()
 }
 
 /********************************************//**
-* \update screen content
+* update screen content
 ***********************************************/
 void 
 GameScreen::Update( sf::RenderWindow &Window, sf::Event event )
@@ -45,7 +49,7 @@ GameScreen::Update( sf::RenderWindow &Window, sf::Event event )
 }
 
 /********************************************//**
-* \print the screen content
+* print the screen content
 ***********************************************/
 void 
 GameScreen::Draw( sf::RenderWindow &Window )

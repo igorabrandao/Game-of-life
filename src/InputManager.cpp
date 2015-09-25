@@ -1,7 +1,11 @@
+/*! \brief Class InputManager.cpp.
+ *
+ *  Implements input operations.
+*/
 #include "InputManager.h"
 
 /********************************************//**
-* \class constructor
+* constructor
 ***********************************************/
 InputManager::InputManager()
 {
@@ -9,7 +13,7 @@ InputManager::InputManager()
 }
 
 /********************************************//**
-* \class destructor
+* destructor
 **********************************	*************/
 InputManager::~InputManager()
 {
@@ -17,7 +21,7 @@ InputManager::~InputManager()
 }
 
 /********************************************//**
-* \update event handler
+* update event handler
 ***********************************************/
 void 
 InputManager::Update( sf::Event event_ )
@@ -26,7 +30,7 @@ InputManager::Update( sf::Event event_ )
 }
 
 /********************************************//**
-* \catch the pressed key event
+* catch the pressed key event
 ***********************************************/
 bool 
 InputManager::KeyPressed( int key_ )
@@ -37,7 +41,7 @@ InputManager::KeyPressed( int key_ )
 }
 
 /********************************************//**
-* \catch the pressed key event
+* catch the pressed key event
 ***********************************************/
 bool 
 InputManager::KeyPressed( std::vector<int> keys_ )
@@ -51,7 +55,7 @@ InputManager::KeyPressed( std::vector<int> keys_ )
 }
 
 /********************************************//**
-* \catch the released key event
+* catch the released key event
 ***********************************************/
 bool 
 InputManager::KeyReleased( int key_ )
@@ -62,7 +66,7 @@ InputManager::KeyReleased( int key_ )
 }
 
 /********************************************//**
-* \catch the released key event
+* catch the released key event
 ***********************************************/
 bool 
 InputManager::KeyReleased( std::vector<int> keys_ )
@@ -76,7 +80,7 @@ InputManager::KeyReleased( std::vector<int> keys_ )
 }
 
 /********************************************//**
-* \catch the key down event
+* catch the key down event
 ***********************************************/
 bool 
 InputManager::KeyDown( sf::RenderWindow &Window, sf::Keyboard::Key key_ )
@@ -87,7 +91,7 @@ InputManager::KeyDown( sf::RenderWindow &Window, sf::Keyboard::Key key_ )
 }
 
 /********************************************//**
-* \catch the key down event
+* catch the key down event
 ***********************************************/
 bool 
 InputManager::KeyDown( sf::RenderWindow &Window, std::vector<sf::Keyboard::Key> keys_ )

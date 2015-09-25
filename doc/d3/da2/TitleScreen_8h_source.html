@@ -24,7 +24,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Game of Life
    </div>
-   <div id="projectbrief">Este projeto tem como objetivo implementar o ‘Game of Life’ na linguagem de programação C++ de forma a aplicar os conceitos que envolvem orientação a objetos, estruturação de projetos e uso da plataforma SFML aprendidos em sala de aula.</div>
+   <div id="projectbrief">Este projeto é a implementação do ‘Conway&#39;s Game of Life’ na linguagem de programação C++, com o intuito de aplicar todos os conceitos aprendidos em sala de aula.</div>
   </td>
  </tr>
  </tbody>
@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">TitleScreen.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/********************************************/</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef TITLESCREEN_H</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TITLESCREEN_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span></div>
@@ -98,38 +98,40 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d4/d6e/classTitleScreen.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d6e/classTitleScreen.html">TitleScreen</a> : <span class="keyword">public</span> <a class="code" href="../../db/d45/classGameScreen.html">GameScreen</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../d4/d6e/classTitleScreen.html#a7aa7add9040c34b655bcde4cd6e758f2">TitleScreen</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        ~<a class="code" href="../../d4/d6e/classTitleScreen.html">TitleScreen</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d4/d6e/classTitleScreen.html#a0ef51bf71258383c9a7b108bb11073b2">LoadContent</a>(); <span class="comment">// Load the content on the screen</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d4/d6e/classTitleScreen.html#a4745e5b8b42716e828bcec5dc04dc1f2">UnloadContent</a>(); <span class="comment">// Unload memory allocation</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d4/d6e/classTitleScreen.html#aba76adc274ebe479681049b3498f2d8a">Update</a>( sf::RenderWindow &amp;Window, sf::Event event ); <span class="comment">// Update the screen content</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d4/d6e/classTitleScreen.html#ad1e6aade2b7097d289da8e9e1c8b292e">Draw</a>( sf::RenderWindow &amp;Window ); <span class="comment">// Print the content on the screen</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"></span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        sf::Text text;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        sf::Font font;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../d4/d6e/classTitleScreen.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d6e/classTitleScreen.html">TitleScreen</a> : <span class="keyword">public</span> <a class="code" href="../../db/d45/classGameScreen.html">GameScreen</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="../../d4/d6e/classTitleScreen.html#a7aa7add9040c34b655bcde4cd6e758f2">TitleScreen</a>();      </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="../../d4/d6e/classTitleScreen.html#a4f844eb163acc5b2373f6330b37673c1">~TitleScreen</a>();     </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d4/d6e/classTitleScreen.html#a0ef51bf71258383c9a7b108bb11073b2">LoadContent</a>(); </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d4/d6e/classTitleScreen.html#a4745e5b8b42716e828bcec5dc04dc1f2">UnloadContent</a>(); </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d4/d6e/classTitleScreen.html#aba76adc274ebe479681049b3498f2d8a">Update</a>( sf::RenderWindow &amp;Window, sf::Event event ); </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d4/d6e/classTitleScreen.html#ad1e6aade2b7097d289da8e9e1c8b292e">Draw</a>( sf::RenderWindow &amp;Window ); </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="../../d7/de8/classMenuManager.html">MenuManager</a> menu;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        sf::Text text;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        sf::Font font;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif // TITLESCREEN_H</span></div>
-<div class="ttc" id="classTitleScreen_html_a4745e5b8b42716e828bcec5dc04dc1f2"><div class="ttname"><a href="../../d4/d6e/classTitleScreen.html#a4745e5b8b42716e828bcec5dc04dc1f2">TitleScreen::UnloadContent</a></div><div class="ttdeci">void UnloadContent()</div><div class="ttdef"><b>Definition:</b> TitleScreen.cpp:43</div></div>
-<div class="ttc" id="classTitleScreen_html_aba76adc274ebe479681049b3498f2d8a"><div class="ttname"><a href="../../d4/d6e/classTitleScreen.html#aba76adc274ebe479681049b3498f2d8a">TitleScreen::Update</a></div><div class="ttdeci">void Update(sf::RenderWindow &amp;Window, sf::Event event)</div><div class="ttdef"><b>Definition:</b> TitleScreen.cpp:52</div></div>
-<div class="ttc" id="classTitleScreen_html_ad1e6aade2b7097d289da8e9e1c8b292e"><div class="ttname"><a href="../../d4/d6e/classTitleScreen.html#ad1e6aade2b7097d289da8e9e1c8b292e">TitleScreen::Draw</a></div><div class="ttdeci">void Draw(sf::RenderWindow &amp;Window)</div><div class="ttdef"><b>Definition:</b> TitleScreen.cpp:108</div></div>
-<div class="ttc" id="classTitleScreen_html_a0ef51bf71258383c9a7b108bb11073b2"><div class="ttname"><a href="../../d4/d6e/classTitleScreen.html#a0ef51bf71258383c9a7b108bb11073b2">TitleScreen::LoadContent</a></div><div class="ttdeci">void LoadContent()</div><div class="ttdef"><b>Definition:</b> TitleScreen.cpp:23</div></div>
-<div class="ttc" id="classTitleScreen_html_a7aa7add9040c34b655bcde4cd6e758f2"><div class="ttname"><a href="../../d4/d6e/classTitleScreen.html#a7aa7add9040c34b655bcde4cd6e758f2">TitleScreen::TitleScreen</a></div><div class="ttdeci">TitleScreen()</div><div class="ttdef"><b>Definition:</b> TitleScreen.cpp:6</div></div>
-<div class="ttc" id="classMenuManager_html"><div class="ttname"><a href="../../d7/de8/classMenuManager.html">MenuManager</a></div><div class="ttdef"><b>Definition:</b> MenuManager.h:15</div></div>
-<div class="ttc" id="classTitleScreen_html"><div class="ttname"><a href="../../d4/d6e/classTitleScreen.html">TitleScreen</a></div><div class="ttdef"><b>Definition:</b> TitleScreen.h:15</div></div>
-<div class="ttc" id="classGameScreen_html"><div class="ttname"><a href="../../db/d45/classGameScreen.html">GameScreen</a></div><div class="ttdef"><b>Definition:</b> GameScreen.h:8</div></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../d7/de8/classMenuManager.html">MenuManager</a> menu;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif // TITLESCREEN_H</span></div>
+<div class="ttc" id="classTitleScreen_html_a4745e5b8b42716e828bcec5dc04dc1f2"><div class="ttname"><a href="../../d4/d6e/classTitleScreen.html#a4745e5b8b42716e828bcec5dc04dc1f2">TitleScreen::UnloadContent</a></div><div class="ttdeci">void UnloadContent()</div><div class="ttdef"><b>Definition:</b> TitleScreen.cpp:47</div></div>
+<div class="ttc" id="classTitleScreen_html_aba76adc274ebe479681049b3498f2d8a"><div class="ttname"><a href="../../d4/d6e/classTitleScreen.html#aba76adc274ebe479681049b3498f2d8a">TitleScreen::Update</a></div><div class="ttdeci">void Update(sf::RenderWindow &amp;Window, sf::Event event)</div><div class="ttdef"><b>Definition:</b> TitleScreen.cpp:56</div></div>
+<div class="ttc" id="classTitleScreen_html_ad1e6aade2b7097d289da8e9e1c8b292e"><div class="ttname"><a href="../../d4/d6e/classTitleScreen.html#ad1e6aade2b7097d289da8e9e1c8b292e">TitleScreen::Draw</a></div><div class="ttdeci">void Draw(sf::RenderWindow &amp;Window)</div><div class="ttdef"><b>Definition:</b> TitleScreen.cpp:112</div></div>
+<div class="ttc" id="classTitleScreen_html_a0ef51bf71258383c9a7b108bb11073b2"><div class="ttname"><a href="../../d4/d6e/classTitleScreen.html#a0ef51bf71258383c9a7b108bb11073b2">TitleScreen::LoadContent</a></div><div class="ttdeci">void LoadContent()</div><div class="ttdef"><b>Definition:</b> TitleScreen.cpp:27</div></div>
+<div class="ttc" id="classTitleScreen_html_a4f844eb163acc5b2373f6330b37673c1"><div class="ttname"><a href="../../d4/d6e/classTitleScreen.html#a4f844eb163acc5b2373f6330b37673c1">TitleScreen::~TitleScreen</a></div><div class="ttdeci">~TitleScreen()</div><div class="ttdef"><b>Definition:</b> TitleScreen.cpp:18</div></div>
+<div class="ttc" id="classTitleScreen_html_a7aa7add9040c34b655bcde4cd6e758f2"><div class="ttname"><a href="../../d4/d6e/classTitleScreen.html#a7aa7add9040c34b655bcde4cd6e758f2">TitleScreen::TitleScreen</a></div><div class="ttdeci">TitleScreen()</div><div class="ttdoc">Class TitleScreen.cpp. </div><div class="ttdef"><b>Definition:</b> TitleScreen.cpp:10</div></div>
+<div class="ttc" id="classMenuManager_html"><div class="ttname"><a href="../../d7/de8/classMenuManager.html">MenuManager</a></div><div class="ttdef"><b>Definition:</b> MenuManager.h:17</div></div>
+<div class="ttc" id="classTitleScreen_html"><div class="ttname"><a href="../../d4/d6e/classTitleScreen.html">TitleScreen</a></div><div class="ttdoc">Class TitleScreen.h. </div><div class="ttdef"><b>Definition:</b> TitleScreen.h:16</div></div>
+<div class="ttc" id="classGameScreen_html"><div class="ttname"><a href="../../db/d45/classGameScreen.html">GameScreen</a></div><div class="ttdoc">Class GameScreen.h. </div><div class="ttdef"><b>Definition:</b> GameScreen.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 24 2015 20:50:33 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 22:06:28 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -24,7 +24,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Game of Life
    </div>
-   <div id="projectbrief">Este projeto tem como objetivo implementar o ‘Game of Life’ na linguagem de programação C++ de forma a aplicar os conceitos que envolvem orientação a objetos, estruturação de projetos e uso da plataforma SFML aprendidos em sala de aula.</div>
+   <div id="projectbrief">Este projeto é a implementação do ‘Conway&#39;s Game of Life’ na linguagem de programação C++, com o intuito de aplicar todos os conceitos aprendidos em sala de aula.</div>
   </td>
  </tr>
  </tbody>
@@ -78,10 +78,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Game of Life Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p><b>Visão Geral</b></p>
+<p>O ‘Game of Life’ é um autómato celular desenvolvido pelo matemático britânico John Horton Conway em 1970 É o exemplo mais bem conhecido de autômato celular.</p>
+<p>O jogo foi criado de modo a reproduzir, através de regras simples, as alterações e mudanças em grupos de seres vivos, tendo aplicações em diversas áreas da ciência.</p>
+<p>As regras definidas são aplicadas a cada nova "geração"; assim, a partir de uma imagem em um tabuleiro bi-dimensional definida pelo jogador, percebem-se mudanças muitas vezes inesperadas e belas a cada nova geração, variando de padrões fixos a caóticos.</p>
+<p>Este projeto tem como objetivo implementar o ‘Game of Life’ na linguagem de programação C++ de forma a aplicar os conceitos que envolvem orientação a objetos, estruturação de projetos e uso da plataforma SFML aprendidos em sala de aula.</p>
+<p>Definição retirada da wikpedia.</p>
+<p><b>Membros da equipe</b></p>
+<p>Igor A. Brandão e Leandro Antonio F. da Silva</p>
+<p><b>Como compilar</b></p>
+<p>Use o makefile digitando o comando **'make'** pelo terminal, após ter navegado para a pasta do projeto.</p>
+<p><b>Como gerar a documentação</b></p>
+<p>Use o comando **'doxygen Doxyfile'** pelo terminal, após ter navegado para a pasta do projeto (caso a pasta doc não estiver presente na raiz do projeto).</p>
+<p><b>Informações adicionais</b></p>
+<p>Buscamos utilizar uma estrutura mais rebuscada para o jogo como um todo, realizando o gerenciamento da plataforma em classes responsáveis por gerenciar elementos distintos do jogo, separadas da seguinte maneira:</p>
+<p><b><a class="el" href="d2/d76/Animation_8h_source.html">Animation.h</a></b> =&gt; Gerencia os efeitos de transição entre tela (fade, scroll, zoom).</p>
+<p><b><a class="el" href="dc/dd9/ConfigScreen_8h_source.html">ConfigScreen.h</a></b> =&gt; Trata os elementos visuais do jogo, assim como a atualização destes.</p>
+<p><b><a class="el" href="dd/d26/FadeAnimation_8h_source.html">FadeAnimation.h</a></b> =&gt; Classe responsável pelo efeito fade.</p>
+<p><b><a class="el" href="d1/dd4/FileManager_8h_source.html">FileManager.h</a></b> =&gt; Gerencia a manipulação de arquivos (leitura das configurações).</p>
+<p><b><a class="el" href="d5/d6a/GameScreen_8h_source.html">GameScreen.h</a></b> =&gt; Lida com instâncias genéricas e reutilizáveis do projeto.</p>
+<p><b><a class="el" href="df/d10/InputManager_8h_source.html">InputManager.h</a></b> =&gt; Gerencia eventos de entrada de teclado e outros periféricos.</p>
+<p><b><a class="el" href="d6/dc5/LifeScreen_8h_source.html">LifeScreen.h</a> (Principal)</b> =&gt; Trata os elementos que envolvem a mecânica da simulação.</p>
+<p><b><a class="el" href="dc/d2e/MenuManager_8h_source.html">MenuManager.h</a></b> =&gt; Gera o menu do jogo de acordo com o arquivo de configuração.</p>
+<p><b><a class="el" href="d3/d7a/ScreenManager_8h_source.html">ScreenManager.h</a></b> =&gt; Gerencia a criação de todas as telas através do método AddScreen com GetInstance.</p>
+<p><b><a class="el" href="d1/d7e/SplashScreen_8h_source.html">SplashScreen.h</a></b> =&gt; Cria a apresentação inicial do jogo.</p>
+<p><b><a class="el" href="d3/da2/TitleScreen_8h_source.html">TitleScreen.h</a></b> =&gt; Tela base que através do <a class="el" href="d7/de8/classMenuManager.html">MenuManager</a> faz a geração do menu inicial. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 24 2015 20:50:33 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 22:06:28 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

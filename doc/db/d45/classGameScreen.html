@@ -24,7 +24,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Game of Life
    </div>
-   <div id="projectbrief">Este projeto tem como objetivo implementar o ‘Game of Life’ na linguagem de programação C++ de forma a aplicar os conceitos que envolvem orientação a objetos, estruturação de projetos e uso da plataforma SFML aprendidos em sala de aula.</div>
+   <div id="projectbrief">Este projeto é a implementação do ‘Conway&#39;s Game of Life’ na linguagem de programação C++, com o intuito de aplicar todos os conceitos aprendidos em sala de aula.</div>
   </td>
  </tr>
  </tbody>
@@ -90,6 +90,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">GameScreen Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class <a class="el" href="../../d5/d6a/GameScreen_8h_source.html">GameScreen.h</a>.  
+ <a href="../../db/d45/classGameScreen.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d5/d6a/GameScreen_8h_source.html">GameScreen.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for GameScreen:</div>
 <div class="dyncontent">
@@ -98,15 +103,18 @@ Inheritance diagram for GameScreen:</div>
   <map id="GameScreen_map" name="GameScreen_map">
 <area href="../../d5/da8/classConfigScreen.html" title="Class ConfigScreen.h. " alt="ConfigScreen" shape="rect" coords="0,56,91,80"/>
 <area href="../../df/dea/classLifeScreen.html" title="Class LifeScreen.h. " alt="LifeScreen" shape="rect" coords="101,56,192,80"/>
-<area href="../../d1/d79/classSplashScreen.html" alt="SplashScreen" shape="rect" coords="202,56,293,80"/>
-<area href="../../d4/d6e/classTitleScreen.html" alt="TitleScreen" shape="rect" coords="303,56,394,80"/>
+<area href="../../d1/d79/classSplashScreen.html" title="Class SplashScreen.h. " alt="SplashScreen" shape="rect" coords="202,56,293,80"/>
+<area href="../../d4/d6e/classTitleScreen.html" title="Class TitleScreen.h. " alt="TitleScreen" shape="rect" coords="303,56,394,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae68a867285e0aba9d2b22bff690616ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d45/classGameScreen.html#ae68a867285e0aba9d2b22bff690616ac">GameScreen</a> ()</td></tr>
+<tr class="memdesc:ae68a867285e0aba9d2b22bff690616ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class GameScreen.cpp.  <a href="#ae68a867285e0aba9d2b22bff690616ac">More...</a><br/></td></tr>
 <tr class="separator:ae68a867285e0aba9d2b22bff690616ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d25dfce42d72954aab40dbccbf1a0b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d45/classGameScreen.html#a0d25dfce42d72954aab40dbccbf1a0b1">~GameScreen</a> ()</td></tr>
+<tr class="separator:a0d25dfce42d72954aab40dbccbf1a0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b6a5bc1018a9e43e268e5c2b398f63f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d45/classGameScreen.html#a1b6a5bc1018a9e43e268e5c2b398f63f">LoadContent</a> ()</td></tr>
 <tr class="separator:a1b6a5bc1018a9e43e268e5c2b398f63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af36f4550afa8123b3ebb31d7f0145eea"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d45/classGameScreen.html#af36f4550afa8123b3ebb31d7f0145eea">UnloadContent</a> ()</td></tr>
@@ -137,7 +145,11 @@ std::vector&lt; std::vector<br class="typebreak"/>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></td></tr>
 <tr class="separator:a38521d81297baee03dccaeadadc93196"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="../../d5/d6a/GameScreen_8h_source.html">GameScreen.h</a>. </p>
+<p>Manage the game screens.</p>
+<p><a class="el" href="../../db/d45/classGameScreen.html" title="Class GameScreen.h. ">GameScreen</a> class </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae68a867285e0aba9d2b22bff690616ac"></a>
 <div class="memitem">
 <div class="memproto">
@@ -150,8 +162,28 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Class GameScreen.cpp. </p>
 <p>Public section</p>
-<p>Functions </p>
+<p>Functions Constructor</p>
+<p>Implements the game screens. constructor </p>
+
+</div>
+</div>
+<a class="anchor" id="a0d25dfce42d72954aab40dbccbf1a0b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameScreen::~GameScreen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destructor</p>
+<p>destructor </p>
 
 </div>
 </div>
@@ -177,9 +209,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
   </tr>
 </table>
 </div><div class="memdoc">
-<p>the screen content </p>
+<p>Print the content on the screen</p>
+<p>print the screen content </p>
 
-<p>Reimplemented in <a class="el" href="../../df/dea/classLifeScreen.html#af1d67a4be3c2fb3f0abef23918a370dd">LifeScreen</a>, <a class="el" href="../../d5/da8/classConfigScreen.html#aaabe23684bf661d3babdb8d47352e015">ConfigScreen</a>, <a class="el" href="../../d4/d6e/classTitleScreen.html#ad1e6aade2b7097d289da8e9e1c8b292e">TitleScreen</a>, and <a class="el" href="../../d1/d79/classSplashScreen.html#a9a59293032eca9802872f4668963773b">SplashScreen</a>.</p>
+<p>Reimplemented in <a class="el" href="../../df/dea/classLifeScreen.html#af1d67a4be3c2fb3f0abef23918a370dd">LifeScreen</a>, <a class="el" href="../../d5/da8/classConfigScreen.html#aaabe23684bf661d3babdb8d47352e015">ConfigScreen</a>, <a class="el" href="../../d1/d79/classSplashScreen.html#a9a59293032eca9802872f4668963773b">SplashScreen</a>, and <a class="el" href="../../d4/d6e/classTitleScreen.html#ad1e6aade2b7097d289da8e9e1c8b292e">TitleScreen</a>.</p>
 
 </div>
 </div>
@@ -203,9 +236,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
   </tr>
 </table>
 </div><div class="memdoc">
-<p>content on screen </p>
+<p>Load the content on the screen</p>
+<p>load content on screen </p>
 
-<p>Reimplemented in <a class="el" href="../../df/dea/classLifeScreen.html#a44ee2ee6a2816d934247b21f591d319e">LifeScreen</a>, <a class="el" href="../../d5/da8/classConfigScreen.html#a03f306e3199ee93cf68de0a3a64bd2ce">ConfigScreen</a>, <a class="el" href="../../d4/d6e/classTitleScreen.html#a0ef51bf71258383c9a7b108bb11073b2">TitleScreen</a>, and <a class="el" href="../../d1/d79/classSplashScreen.html#af563dcd9416b92953241a524590de6b7">SplashScreen</a>.</p>
+<p>Reimplemented in <a class="el" href="../../df/dea/classLifeScreen.html#a44ee2ee6a2816d934247b21f591d319e">LifeScreen</a>, <a class="el" href="../../d5/da8/classConfigScreen.html#a03f306e3199ee93cf68de0a3a64bd2ce">ConfigScreen</a>, <a class="el" href="../../d1/d79/classSplashScreen.html#af563dcd9416b92953241a524590de6b7">SplashScreen</a>, and <a class="el" href="../../d4/d6e/classTitleScreen.html#a0ef51bf71258383c9a7b108bb11073b2">TitleScreen</a>.</p>
 
 </div>
 </div>
@@ -229,9 +263,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
   </tr>
 </table>
 </div><div class="memdoc">
-<p>screen's content </p>
+<p>Unload the content on the screen</p>
+<p>unload screen's content </p>
 
-<p>Reimplemented in <a class="el" href="../../df/dea/classLifeScreen.html#ac72a162421845fd2f496d3be072d7824">LifeScreen</a>, <a class="el" href="../../d5/da8/classConfigScreen.html#a5d41ca4d433f3e0bd64b4b7ad41cb02f">ConfigScreen</a>, <a class="el" href="../../d4/d6e/classTitleScreen.html#a4745e5b8b42716e828bcec5dc04dc1f2">TitleScreen</a>, and <a class="el" href="../../d1/d79/classSplashScreen.html#a874cfdfdeb05fff5173cb91783f4b0e2">SplashScreen</a>.</p>
+<p>Reimplemented in <a class="el" href="../../df/dea/classLifeScreen.html#ac72a162421845fd2f496d3be072d7824">LifeScreen</a>, <a class="el" href="../../d5/da8/classConfigScreen.html#a5d41ca4d433f3e0bd64b4b7ad41cb02f">ConfigScreen</a>, <a class="el" href="../../d1/d79/classSplashScreen.html#a874cfdfdeb05fff5173cb91783f4b0e2">SplashScreen</a>, and <a class="el" href="../../d4/d6e/classTitleScreen.html#a4745e5b8b42716e828bcec5dc04dc1f2">TitleScreen</a>.</p>
 
 </div>
 </div>
@@ -266,9 +301,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
   </tr>
 </table>
 </div><div class="memdoc">
-<p>screen content </p>
+<p>Update the screen content</p>
+<p>update screen content </p>
 
-<p>Reimplemented in <a class="el" href="../../df/dea/classLifeScreen.html#a76e8296cd8fbad9e6ea4ab350bf1ce47">LifeScreen</a>, <a class="el" href="../../d5/da8/classConfigScreen.html#a6d01233ce48e0a205f59c6da6b4d05c2">ConfigScreen</a>, <a class="el" href="../../d4/d6e/classTitleScreen.html#aba76adc274ebe479681049b3498f2d8a">TitleScreen</a>, and <a class="el" href="../../d1/d79/classSplashScreen.html#a0fcce8b1402d206458155daa006b8563">SplashScreen</a>.</p>
+<p>Reimplemented in <a class="el" href="../../df/dea/classLifeScreen.html#a76e8296cd8fbad9e6ea4ab350bf1ce47">LifeScreen</a>, <a class="el" href="../../d5/da8/classConfigScreen.html#a6d01233ce48e0a205f59c6da6b4d05c2">ConfigScreen</a>, <a class="el" href="../../d1/d79/classSplashScreen.html#a0fcce8b1402d206458155daa006b8563">SplashScreen</a>, and <a class="el" href="../../d4/d6e/classTitleScreen.html#aba76adc274ebe479681049b3498f2d8a">TitleScreen</a>.</p>
 
 </div>
 </div>
@@ -290,7 +326,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Classes instances </p>
+<p><a class="el" href="../../db/dd5/classFileManager.html" title="Class FileManager.h. ">FileManager</a> instance </p>
 
 </div>
 </div>
@@ -311,7 +347,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Protected section </p>
+<p>Protected section</p>
+<p><a class="el" href="../../d5/d39/classInputManager.html" title="Class InputManager.h. ">InputManager</a> instance </p>
 
 </div>
 </div>
@@ -322,7 +359,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 24 2015 20:50:33 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 22:06:28 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

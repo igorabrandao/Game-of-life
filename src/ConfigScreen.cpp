@@ -5,7 +5,7 @@
 #include "ConfigScreen.h"
 
 /********************************************//**
-* \class constructor
+* constructor
 ***********************************************/
 ConfigScreen::ConfigScreen()
 {
@@ -13,7 +13,7 @@ ConfigScreen::ConfigScreen()
 }
 
 /********************************************//**
-* \class destructor
+* destructor
 ***********************************************/
 ConfigScreen::~ConfigScreen()
 {
@@ -21,7 +21,7 @@ ConfigScreen::~ConfigScreen()
 }
 
 /********************************************//**
-* \content loader
+* content loader
 ***********************************************/
 void
 ConfigScreen::LoadContent()
@@ -55,7 +55,7 @@ ConfigScreen::LoadContent()
 }
 
 /********************************************//**
-* \content unloader
+* content unloader
 ***********************************************/
 void
 ConfigScreen::UnloadContent()
@@ -64,7 +64,7 @@ ConfigScreen::UnloadContent()
 }
 
 /********************************************//**
-* \update visual elements
+* update visual elements
 ***********************************************/
 void
 ConfigScreen::Update(sf::RenderWindow& window, sf::Event event)
@@ -73,7 +73,7 @@ ConfigScreen::Update(sf::RenderWindow& window, sf::Event event)
 }
 
 /********************************************//**
-* \render the elements
+* render the elements
 ***********************************************/
 void
 ConfigScreen::Draw(sf::RenderWindow& window)
@@ -83,7 +83,7 @@ ConfigScreen::Draw(sf::RenderWindow& window)
 }
 
 /********************************************//**
-* \handler of input events
+* handler of input events
 ***********************************************/
 void
 ConfigScreen::HandleInput(sf::RenderWindow& window, sf::Event event)
@@ -130,7 +130,7 @@ ConfigScreen::HandleInput(sf::RenderWindow& window, sf::Event event)
 }
 
 /********************************************//**
-* \handler of output file
+* handler of output file
 ***********************************************/
 void
 ConfigScreen::SaveFilename()

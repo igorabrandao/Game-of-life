@@ -5,7 +5,7 @@
 #include "Animation.h"
 
 /********************************************//**
-* \class constructor
+* constructor
 ***********************************************/
 Animation::Animation()
 {
@@ -13,7 +13,7 @@ Animation::Animation()
 }
 
 /********************************************//**
-* \class destructor
+* destructor
 ***********************************************/
 Animation::~Animation()
 {
@@ -21,7 +21,7 @@ Animation::~Animation()
 }
 
 /********************************************//**
-* \content loader
+* content loader
 ***********************************************/
 void 
 Animation::LoadContent( std::string text, sf::Texture &image, sf::Vector2f position )
@@ -41,7 +41,7 @@ Animation::LoadContent( std::string text, sf::Texture &image, sf::Vector2f posit
 }
 
 /********************************************//**
-* \content unloader
+* content unloader
 ***********************************************/
 void 
 Animation::UnloadContent()
@@ -50,7 +50,7 @@ Animation::UnloadContent()
 }
 
 /********************************************//**
-* \update animation
+* update animation
 ***********************************************/
 void 
 Animation::Update( sf::RenderWindow &Window )
@@ -59,7 +59,7 @@ Animation::Update( sf::RenderWindow &Window )
 }
 
 /********************************************//**
-* \render the animation
+* render the animation
 ***********************************************/
 void 
 Animation::Draw( sf::RenderWindow &Window )
@@ -86,7 +86,7 @@ Animation::Draw( sf::RenderWindow &Window )
 }
 
 /********************************************//**
-* \get animation alpha value
+* get animation alpha value
 ***********************************************/
 float 
 &Animation::GetAlpha()
@@ -95,7 +95,7 @@ float
 }
 
 /********************************************//**
-* \get animation active
+* get animation active
 ***********************************************/
 bool 
 &Animation::GetActive()
@@ -104,7 +104,7 @@ bool
 }
 
 /********************************************//**
-* \get animation scale
+* get animation scale
 ***********************************************/
 float 
 &Animation::GetScale()
@@ -113,7 +113,7 @@ float
 }
 
 /********************************************//**
-* \set animation alpha value
+* set animation alpha value
 ***********************************************/
 void 
 Animation::SetAlpha( float value )

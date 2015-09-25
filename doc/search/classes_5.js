@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inputmanager',['InputManager',['../d5/d39/classInputManager.html',1,'']]]
+  ['lifescreen',['LifeScreen',['../df/dea/classLifeScreen.html',1,'']]]
 ];

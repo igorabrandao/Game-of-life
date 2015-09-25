@@ -1,7 +1,7 @@
-/********************************************//**
-* \MenuManager.h
-* \Class to handle menu's issues
-***********************************************/
+/*! \brief Class MenuManager.h.
+ *
+ *  Handle menu's issues.
+*/
 #ifndef MENUMANAGER_H
 #define MENUMANAGER_H
 
@@ -10,24 +10,28 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 
+/*! Constants */
 #define MAX_NUMBER_OF_ITEMS 3
 
+/*! MenuManager class */
 class MenuManager
 {
 	/*!
      * Public section
 	*/
 	public:
-		/*! Functions */
-		MenuManager();
-		~MenuManager();
 
-		void LoadContent( float width, float height );
-		void MoveDown(); // Unload memory allocation
-		void MoveUp(); // Update the screen content
-		void Draw( sf::RenderWindow &Window ); // Print the content on the screen
-		int GetPressedItem() { return selectedItemIndex; }
-		void SoundStop() { sound.stop(); }
+		/*! Functions */
+		MenuManager();		/*!< Constructor */
+		~MenuManager();		/*!< Destructor */
+
+		void LoadContent( float width, float height ); /*!< Load the content on the screen */
+		void MoveDown(); /*!< Unload memory allocation */
+		void MoveUp(); /*!< Update the screen content */
+		void Draw( sf::RenderWindow &Window ); /*!< Print the content on the screen */
+		int GetPressedItem() { return selectedItemIndex; } /*!< Get the pressed item */
+		void SoundStop() { sound.stop(); } /*!< Stop sound */
+
 	/*!
      * Protected section
 	*/
@@ -37,6 +41,7 @@ class MenuManager
      * Private section
 	*/
 	private:
+
 		/*! Attributes */
 		int selectedItemIndex;
 		sf::Font font;

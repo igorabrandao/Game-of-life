@@ -5,7 +5,7 @@
 #include "FadeAnimation.h"
 
 /********************************************//**
-* \class constructor
+* constructor
 ***********************************************/
 FadeAnimation::FadeAnimation(void)
 {
@@ -13,7 +13,7 @@ FadeAnimation::FadeAnimation(void)
 }
 
 /********************************************//**
-* \class destructor
+* destructor
 ***********************************************/
 FadeAnimation::~FadeAnimation(void)
 {
@@ -21,7 +21,7 @@ FadeAnimation::~FadeAnimation(void)
 }
 
 /********************************************//**
-* \content loader
+* content loader
 ***********************************************/
 void 
 FadeAnimation::LoadContent( std::string text, sf::Texture &image, sf::Vector2f position )
@@ -32,7 +32,7 @@ FadeAnimation::LoadContent( std::string text, sf::Texture &image, sf::Vector2f p
 }
 
 /********************************************//**
-* \content unloader
+* content unloader
 ***********************************************/
 void 
 FadeAnimation::UnloadContent()
@@ -41,7 +41,7 @@ FadeAnimation::UnloadContent()
 }
 
 /********************************************//**
-* \catch the pressed key event
+* catch the pressed key event
 ***********************************************/
 void 
 FadeAnimation::Update( sf::RenderWindow &Window )
@@ -73,7 +73,7 @@ FadeAnimation::Update( sf::RenderWindow &Window )
 }
 
 /********************************************//**
-* \catch the pressed key event
+* catch the pressed key event
 ***********************************************/
 void 
 FadeAnimation::Draw( sf::RenderWindow &Window )
@@ -82,7 +82,7 @@ FadeAnimation::Draw( sf::RenderWindow &Window )
 }
 
 /********************************************//**
-* \set animation alpha value
+* set animation alpha value
 ***********************************************/
 void 
 FadeAnimation::SetAlpha( float value )

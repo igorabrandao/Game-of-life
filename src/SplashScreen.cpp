@@ -1,7 +1,11 @@
+/*! \brief Class SplashScreen.cpp.
+ *
+ *  Implements splash screen functions.
+*/
 #include "SplashScreen.h"
 
 /********************************************//**
-* \class constructor
+* constructor
 ***********************************************/
 SplashScreen::SplashScreen()
 {
@@ -9,7 +13,7 @@ SplashScreen::SplashScreen()
 }
 
 /********************************************//**
-* \class destructor
+* destructor
 ***********************************************/
 SplashScreen::~SplashScreen()
 {
@@ -17,7 +21,7 @@ SplashScreen::~SplashScreen()
 }
 
 /********************************************//**
-* \load content on screen
+* load content on screen
 ***********************************************/
 void
 SplashScreen::LoadContent()
@@ -57,7 +61,7 @@ SplashScreen::LoadContent()
 }
 
 /********************************************//**
-* \unload screen's content
+* unload screen's content
 ***********************************************/
 void
 SplashScreen::UnloadContent()
@@ -73,7 +77,7 @@ SplashScreen::UnloadContent()
 }
 
 /********************************************//**
-* \update screen content
+* update screen content
 ***********************************************/
 void 
 SplashScreen::Update( sf::RenderWindow &Window, sf::Event event )
@@ -93,7 +97,7 @@ SplashScreen::Update( sf::RenderWindow &Window, sf::Event event )
 }
 
 /********************************************//**
-* \print the screen content
+* print the screen content
 ***********************************************/
 void 
 SplashScreen::Draw( sf::RenderWindow &Window )

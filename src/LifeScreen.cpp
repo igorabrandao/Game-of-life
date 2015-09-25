@@ -9,11 +9,11 @@ const sf::Time LifeScreen::TimePerFrame = sf::seconds(0.5f);
 const sf::Time LifeScreen::TimePerFrameNormal = sf::seconds(1);
 
 /****************************************************************************************//**
-* \SCREEN AND GAME METHODS
+* SCREEN AND GAME METHODS
 *******************************************************************************************/
 
 /********************************************//**
-* \class constructor
+* constructor
 ***********************************************/
 LifeScreen::LifeScreen()
 {
@@ -21,7 +21,7 @@ LifeScreen::LifeScreen()
 }
 
 /********************************************//**
-* \class destructor
+* destructor
 ***********************************************/
 LifeScreen::~LifeScreen()
 {
@@ -29,7 +29,7 @@ LifeScreen::~LifeScreen()
 }
 
 /********************************************//**
-* \content loader
+* content loader
 ***********************************************/
 void
 LifeScreen::LoadContent()
@@ -102,7 +102,7 @@ LifeScreen::LoadContent()
 }
 
 /********************************************//**
-* \content unloader
+* content unloader
 ***********************************************/
 void
 LifeScreen::UnloadContent()
@@ -111,7 +111,7 @@ LifeScreen::UnloadContent()
 }
 
 /********************************************//**
-* \update animation
+* update animation
 ***********************************************/
 void
 LifeScreen::Update(sf::RenderWindow& window, sf::Event event)
@@ -221,7 +221,7 @@ LifeScreen::Update(sf::RenderWindow& window, sf::Event event)
 }
 
 /********************************************//**
-* \render the elements
+* render the elements
 ***********************************************/
 void
 LifeScreen::Draw(sf::RenderWindow& window)
@@ -238,11 +238,11 @@ LifeScreen::Draw(sf::RenderWindow& window)
 }
 
 /****************************************************************************************//**
-* \SUPPORT METHODS
+* SUPPORT METHODS
 *******************************************************************************************/
 
 /********************************************//**
-* \filename loader
+* filename loader
 ***********************************************/
 void
 LifeScreen::LoadFilename()
@@ -267,7 +267,7 @@ LifeScreen::LoadFilename()
 }
 
 /********************************************//**
-* \config loader
+* config loader
 ***********************************************/
 void
 LifeScreen::LoadConfig()
@@ -330,7 +330,7 @@ LifeScreen::LoadConfig()
 }
 
 /********************************************//**
-* \grid position definer
+* grid position definer
 ***********************************************/
 void
 LifeScreen::SetGridPosition()
@@ -354,7 +354,7 @@ LifeScreen::SetGridPosition()
 }
 
 /********************************************//**
-* \grid sprites updater
+* grid sprites updater
 ***********************************************/
 void
 LifeScreen::UpdateGridSprites()
@@ -371,11 +371,11 @@ LifeScreen::UpdateGridSprites()
 }
 
 /****************************************************************************************//**
-* \ENGINE METHODS
+* ENGINE METHODS
 *******************************************************************************************/
 
 /********************************************//**
-* \check if the generation is stable
+* check if the generation is stable
 ***********************************************/
 bool
 LifeScreen::IsStabe()
@@ -397,7 +397,7 @@ LifeScreen::IsStabe()
 }
 
 /********************************************//**
-* \check if the generation is extinct
+* check if the generation is extinct
 ***********************************************/
 bool
 LifeScreen::IsExtinct()
@@ -421,7 +421,7 @@ LifeScreen::IsExtinct()
 }
 
 /********************************************//**
-* \game saver
+* game saver
 ***********************************************/
 void
 LifeScreen::SavingGame()
@@ -435,7 +435,7 @@ LifeScreen::SavingGame()
 }
 
 /********************************************//**
-* \generation updater
+* generation updater
 ***********************************************/
 void
 LifeScreen::UpdateGeneration()

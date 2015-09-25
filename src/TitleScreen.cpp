@@ -1,7 +1,11 @@
+/*! \brief Class TitleScreen.cpp.
+ *
+ *  Implements game's menu.
+*/
 #include "TitleScreen.h"
 
 /********************************************//**
-* \class constructor
+* constructor
 ***********************************************/
 TitleScreen::TitleScreen()
 {
@@ -9,7 +13,7 @@ TitleScreen::TitleScreen()
 }
 
 /********************************************//**
-* \class destructor
+* destructor
 ***********************************************/
 TitleScreen::~TitleScreen()
 {
@@ -17,7 +21,7 @@ TitleScreen::~TitleScreen()
 }
 
 /********************************************//**
-* \load content on screen
+* load content on screen
 ***********************************************/
 void
 TitleScreen::LoadContent()
@@ -37,7 +41,7 @@ TitleScreen::LoadContent()
 }
 
 /********************************************//**
-* \unload screen's content
+* unload screen's content
 ***********************************************/
 void
 TitleScreen::UnloadContent()
@@ -46,7 +50,7 @@ TitleScreen::UnloadContent()
 }
 
 /********************************************//**
-* \update screen content
+* update screen content
 ***********************************************/
 void
 TitleScreen::Update( sf::RenderWindow &Window, sf::Event event )
@@ -102,7 +106,7 @@ TitleScreen::Update( sf::RenderWindow &Window, sf::Event event )
 }
 
 /********************************************//**
-* \print the screen content
+* print the screen content
 ***********************************************/
 void
 TitleScreen::Draw( sf::RenderWindow &Window )

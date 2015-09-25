@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['menumanager',['MenuManager',['../d7/de8/classMenuManager.html',1,'']]]
+  ['splashscreen',['SplashScreen',['../d1/d79/classSplashScreen.html',1,'']]]
 ];

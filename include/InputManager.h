@@ -1,18 +1,24 @@
+/*! \brief Class InputManager.h.
+ *
+ *  Manage input operations.
+*/
 #ifndef INPUTMANAGER_H
 #define INPUTMANAGER_H
 
 #include <vector>
 #include <SFML/Graphics.hpp>
 
+/*! InputManager class */
 class InputManager
 {
 	/*!
      * Public section
 	*/
 	public:
+
 		/*! Functions */
-		InputManager();  // class destructor
-		~InputManager(); // class constructor
+		InputManager();  /*!< Constructor */
+		~InputManager(); /*!< Destructor */
 
 		/*! Update event */
 		void Update( sf::Event event );
@@ -38,6 +44,8 @@ class InputManager
      * Private section
 	*/
 	private:
+
+		/*! Attributes */
 		sf::Event event;
 };
 

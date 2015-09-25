@@ -24,7 +24,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Game of Life
    </div>
-   <div id="projectbrief">Este projeto tem como objetivo implementar o ‘Game of Life’ na linguagem de programação C++ de forma a aplicar os conceitos que envolvem orientação a objetos, estruturação de projetos e uso da plataforma SFML aprendidos em sala de aula.</div>
+   <div id="projectbrief">Este projeto é a implementação do ‘Conway&#39;s Game of Life’ na linguagem de programação C++, com o intuito de aplicar todos os conceitos aprendidos em sala de aula.</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +100,7 @@ Inheritance diagram for LifeScreen:</div>
  <div class="center">
   <img src="../../df/dea/classLifeScreen.png" usemap="#LifeScreen_map" alt=""/>
   <map id="LifeScreen_map" name="LifeScreen_map">
-<area href="../../db/d45/classGameScreen.html" alt="GameScreen" shape="rect" coords="0,0,85,24"/>
+<area href="../../db/d45/classGameScreen.html" title="Class GameScreen.h. " alt="GameScreen" shape="rect" coords="0,0,85,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -142,7 +142,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a87da8a433999501485b836ff061f5cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classGameScreen"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGameScreen')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../db/d45/classGameScreen.html">GameScreen</a></td></tr>
 <tr class="memitem:ae68a867285e0aba9d2b22bff690616ac inherit pub_methods_classGameScreen"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d45/classGameScreen.html#ae68a867285e0aba9d2b22bff690616ac">GameScreen</a> ()</td></tr>
+<tr class="memdesc:ae68a867285e0aba9d2b22bff690616ac inherit pub_methods_classGameScreen"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class GameScreen.cpp.  <a href="#ae68a867285e0aba9d2b22bff690616ac">More...</a><br/></td></tr>
 <tr class="separator:ae68a867285e0aba9d2b22bff690616ac inherit pub_methods_classGameScreen"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d25dfce42d72954aab40dbccbf1a0b1 inherit pub_methods_classGameScreen"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d45/classGameScreen.html#a0d25dfce42d72954aab40dbccbf1a0b1">~GameScreen</a> ()</td></tr>
+<tr class="separator:a0d25dfce42d72954aab40dbccbf1a0b1 inherit pub_methods_classGameScreen"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -184,7 +187,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
       </table>
 </div><div class="memdoc">
 <p>Public section</p>
-<p>Functions Constructor </p>
+<p>Functions Constructor</p>
+<p>SCREEN AND GAME METHODS constructor </p>
 
 </div>
 </div>
@@ -200,7 +204,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Destructor </p>
+<p>Destructor</p>
+<p>destructor </p>
 
 </div>
 </div>
@@ -254,7 +259,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
 </table>
 </div><div class="memdoc">
 <p>Print the content on the screen</p>
-<p>the elements </p>
+<p>render the elements </p>
 <p>Print the grid on the screen </p>
 
 <p>Reimplemented from <a class="el" href="../../db/d45/classGameScreen.html#a43a2ced5a5aae4960248245eb68ec9ab">GameScreen</a>.</p>
@@ -274,7 +279,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
       </table>
 </div><div class="memdoc">
 <p>Check if the generation is extinct</p>
-<p>if the generation is extinct </p>
+<p>check if the generation is extinct </p>
 <p>If all cells have died </p>
 
 </div>
@@ -292,7 +297,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
       </table>
 </div><div class="memdoc">
 <p>Engine methods Check if the generation is stable</p>
-<p>METHODS  if the generation is stable </p>
+<p>ENGINE METHODS check if the generation is stable </p>
 
 </div>
 </div>
@@ -309,7 +314,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
       </table>
 </div><div class="memdoc">
 <p>Load the setting from config file</p>
-<p>loader </p>
+<p>config loader </p>
 <p>Read the input file from config screen</p>
 <p>Used to extract data of string read from input file</p>
 <p>Show message error</p>
@@ -348,7 +353,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
 </table>
 </div><div class="memdoc">
 <p>Screen and game methods Load the content on the screen</p>
-<p>loader </p>
+<p>content loader </p>
 <p>Load Resources</p>
 <p>Preenche o tabuleiro com os sprites iniciais</p>
 <p>Setando o textbox </p>
@@ -370,7 +375,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
       </table>
 </div><div class="memdoc">
 <p>Support methods Load the filename from config file</p>
-<p>METHODS  loader </p>
+<p>SUPPORT METHODS filename loader </p>
 <p>Read input file</p>
 <p>Used to extract data of string read from input file</p>
 <p>&lt; Store a line from input file</p>
@@ -409,7 +414,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
       </table>
 </div><div class="memdoc">
 <p>Save the game</p>
-<p>saver </p>
+<p>game saver </p>
 
 </div>
 </div>
@@ -463,7 +468,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
       </table>
 </div><div class="memdoc">
 <p>Set the grud's location on the screen</p>
-<p>position definer </p>
+<p>grid position definer </p>
 <p>Set the position of the grid</p>
 <p>&lt; Set the position that'll be printed</p>
 <p>&lt; Update x coordinate</p>
@@ -493,7 +498,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
 </table>
 </div><div class="memdoc">
 <p>Unload the content on the screen</p>
-<p>unloader </p>
+<p>content unloader </p>
 
 <p>Reimplemented from <a class="el" href="../../db/d45/classGameScreen.html#af36f4550afa8123b3ebb31d7f0145eea">GameScreen</a>.</p>
 
@@ -531,7 +536,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
 </table>
 </div><div class="memdoc">
 <p>Update the screen content</p>
-<p>animation </p>
+<p>update animation </p>
 <p>Insere a nova geração no vetor de gerações</p>
 <p>Save the game</p>
 <p>Check the wich kind of key'll be pressed</p>
@@ -555,7 +560,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
       </table>
 </div><div class="memdoc">
 <p>Update the generation</p>
-<p>updater </p>
+<p>generation updater </p>
 <p>Counter of the alive neighbor</p>
 <p>If it's top position</p>
 <p>Atualiza os sprites do tabuleiro </p>
@@ -575,7 +580,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
       </table>
 </div><div class="memdoc">
 <p>Update the grid's visual elements</p>
-<p>sprites updater </p>
+<p>grid sprites updater </p>
 
 </div>
 </div>
@@ -586,7 +591,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 24 2015 20:50:33 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 22:06:28 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

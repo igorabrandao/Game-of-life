@@ -1,13 +1,13 @@
-/********************************************//**
-* \ScreenManager.hpp
-* \Implements ScreenManager class functions
-***********************************************/
+/*! \brief Class ScreenManager.cpp.
+ *
+ *  Implements ScreenManager class functions
+*/
 #include "ScreenManager.h"
 
 GameScreen *currentScreen, *newScreen;
 
 /********************************************//**
-* \instance generator
+* instance generator
 ***********************************************/
 ScreenManager &ScreenManager::GetInstance()
 {
@@ -16,13 +16,13 @@ ScreenManager &ScreenManager::GetInstance()
 }
 
 /********************************************//**
-* \class destructor
+*  destructor
 ***********************************************/
 ScreenManager::~ScreenManager()
 { }
 
 /********************************************//**
-* \generate new screen instance
+* generate new screen instance
 ***********************************************/
 void 
 ScreenManager::Initialize()
@@ -34,7 +34,7 @@ ScreenManager::Initialize()
 }
 
 /********************************************//**
-* \screen's content loader
+* screen's content loader
 ***********************************************/
 void 
 ScreenManager::LoadContent()
@@ -48,7 +48,7 @@ ScreenManager::LoadContent()
 }
 
 /********************************************//**
-* \screen's content unloader
+* screen's content unloader
 ***********************************************/
 void 
 ScreenManager::Update( sf::RenderWindow &Window, sf::Event event )
@@ -59,7 +59,7 @@ ScreenManager::Update( sf::RenderWindow &Window, sf::Event event )
 }
 
 /********************************************//**
-* \print the content on screen
+* print the content on screen
 ***********************************************/
 void 
 ScreenManager::Draw( sf::RenderWindow &Window )
@@ -68,7 +68,7 @@ ScreenManager::Draw( sf::RenderWindow &Window )
 }
 
 /********************************************//**
-* \add a new screen
+* add a new screen
 ***********************************************/
 void 
 ScreenManager::AddScreen( GameScreen *screen )
@@ -87,7 +87,7 @@ ScreenManager::AddScreen( GameScreen *screen )
 }
 
 /********************************************//**
-* \handle screen transition
+* handle screen transition
 ***********************************************/
 void 
 ScreenManager::Transition( sf::RenderWindow &Window )
@@ -113,7 +113,7 @@ ScreenManager::Transition( sf::RenderWindow &Window )
 }
 
 /********************************************//**
-* \get animation alpha value
+* get animation alpha value
 ***********************************************/
 float 
 ScreenManager::GetAlpha()

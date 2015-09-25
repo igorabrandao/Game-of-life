@@ -1,15 +1,17 @@
-#include "FileManager.h"
-
+/*! \brief Class MenuManager.cpp.
+ *
+ * Implements the file operations.
+*/
 #include "FileManager.h"
 
 /********************************************//**
-* \General objects and variables
+* General objects and variables
 **********************************	*************/
 enum LoadState { ATTRIBUTES, CONTENTS };
 int state;
 
 /********************************************//**
-* \class constructor
+* constructor
 ***********************************************/
 FileManager::FileManager( void )
 {
@@ -17,7 +19,7 @@ FileManager::FileManager( void )
 }
 
 /********************************************//**
-* \class destructor
+* destructor
 **********************************	*************/
 FileManager::~FileManager( void )
 {
@@ -25,7 +27,7 @@ FileManager::~FileManager( void )
 }
 
 /********************************************//**
-* \load file content
+* load file content
 ***********************************************/
 void 
 FileManager::LoadContent( const char* filename,

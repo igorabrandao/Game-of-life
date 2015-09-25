@@ -24,7 +24,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Game of Life
    </div>
-   <div id="projectbrief">Este projeto tem como objetivo implementar o ‘Game of Life’ na linguagem de programação C++ de forma a aplicar os conceitos que envolvem orientação a objetos, estruturação de projetos e uso da plataforma SFML aprendidos em sala de aula.</div>
+   <div id="projectbrief">Este projeto é a implementação do ‘Conway&#39;s Game of Life’ na linguagem de programação C++, com o intuito de aplicar todos os conceitos aprendidos em sala de aula.</div>
   </td>
  </tr>
  </tbody>
@@ -89,11 +89,19 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">InputManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class <a class="el" href="../../df/d10/InputManager_8h_source.html">InputManager.h</a>.  
+ <a href="../../d5/d39/classInputManager.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../df/d10/InputManager_8h_source.html">InputManager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8be46886da639b26d67181c29dab6d6c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d39/classInputManager.html#a8be46886da639b26d67181c29dab6d6c">InputManager</a> ()</td></tr>
+<tr class="memdesc:a8be46886da639b26d67181c29dab6d6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class InputManager.cpp.  <a href="#a8be46886da639b26d67181c29dab6d6c">More...</a><br/></td></tr>
 <tr class="separator:a8be46886da639b26d67181c29dab6d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af518290877dd183606709d5852db5491"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d39/classInputManager.html#af518290877dd183606709d5852db5491">~InputManager</a> ()</td></tr>
+<tr class="separator:af518290877dd183606709d5852db5491"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38e17e1ee4253e304067a83f03dd7c54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d39/classInputManager.html#a38e17e1ee4253e304067a83f03dd7c54">Update</a> (sf::Event event)</td></tr>
 <tr class="separator:a38e17e1ee4253e304067a83f03dd7c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f525cb8fd8b97d51734623b8714327a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d39/classInputManager.html#a7f525cb8fd8b97d51734623b8714327a">KeyPressed</a> (int key)</td></tr>
@@ -109,7 +117,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad74cb4853063d63fe8f88666b3a49045"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d39/classInputManager.html#ad74cb4853063d63fe8f88666b3a49045">KeyDown</a> (sf::RenderWindow &amp;Window, std::vector&lt; sf::Keyboard::Key &gt; keys)</td></tr>
 <tr class="separator:ad74cb4853063d63fe8f88666b3a49045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="../../df/d10/InputManager_8h_source.html">InputManager.h</a>. </p>
+<p>Manage input operations.</p>
+<p><a class="el" href="../../d5/d39/classInputManager.html" title="Class InputManager.h. ">InputManager</a> class </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8be46886da639b26d67181c29dab6d6c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -122,8 +134,28 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Class InputManager.cpp. </p>
 <p>Public section</p>
-<p>Functions </p>
+<p>Functions Constructor</p>
+<p>Implements input operations. constructor </p>
+
+</div>
+</div>
+<a class="anchor" id="af518290877dd183606709d5852db5491"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InputManager::~InputManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destructor</p>
+<p>destructor </p>
 
 </div>
 </div>
@@ -152,7 +184,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Catch the key down event</p>
-<p>the key down event </p>
+<p>catch the key down event </p>
 
 </div>
 </div>
@@ -179,7 +211,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>the key down event </p>
+<p>catch the key down event </p>
 
 </div>
 </div>
@@ -197,7 +229,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Catch the pressed key event</p>
-<p>the pressed key event </p>
+<p>catch the pressed key event </p>
 
 </div>
 </div>
@@ -214,7 +246,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>the pressed key event </p>
+<p>catch the pressed key event </p>
 
 </div>
 </div>
@@ -232,7 +264,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Catch the released key event</p>
-<p>the released key event </p>
+<p>catch the released key event </p>
 
 </div>
 </div>
@@ -249,7 +281,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>the released key event </p>
+<p>catch the released key event </p>
 
 </div>
 </div>
@@ -267,7 +299,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Update event</p>
-<p>event handler </p>
+<p>update event handler </p>
 
 </div>
 </div>
@@ -278,7 +310,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 24 2015 20:50:33 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 22:06:28 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

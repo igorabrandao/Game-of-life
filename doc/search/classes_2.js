@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['destructor',['destructor',['../de/d2c/classdestructor.html',1,'']]]
+  ['fadeanimation',['FadeAnimation',['../d8/d92/classFadeAnimation.html',1,'']]],
+  ['filemanager',['FileManager',['../db/dd5/classFileManager.html',1,'']]]
 ];

@@ -1,3 +1,7 @@
+/*! \brief Class SplashScreen.h.
+ *
+ *  Handle splash screen issues.
+*/
 #ifndef SPLASHSCREEN_H
 #define SPLASHSCREEN_H
 
@@ -8,20 +12,23 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
+/*! SplashScreen class */
 class SplashScreen : public GameScreen
 {
 	/*!
      * Public section
 	*/
 	public:
-		/*! Functions */
-		SplashScreen();
-		~SplashScreen();
 
-		void LoadContent(); // Load the content on the screen
-		void UnloadContent(); // Unload the content on the screen
-		void Update( sf::RenderWindow &Window, sf::Event event ); // Update the screen content
-		void Draw( sf::RenderWindow &Window ); // Print the content on the screen
+		/*! Functions */
+		SplashScreen();		/*!< Constructor */
+		~SplashScreen();	/*!< Destructor */
+
+		void LoadContent(); /*!< Load the content on the screen */
+		void UnloadContent(); /*!< Unload the content on the screen */
+		void Update( sf::RenderWindow &Window, sf::Event event ); /*!< Update the screen content */
+		void Draw( sf::RenderWindow &Window ); /*!< Print the content on the screen */
+
 	/*!
      * Protected section
 	*/
@@ -31,6 +38,7 @@ class SplashScreen : public GameScreen
      * Private section
 	*/
 	private:
+
 		/*! Attributes */
 		sf::Text text;
 		sf::Font font;

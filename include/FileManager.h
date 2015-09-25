@@ -1,3 +1,7 @@
+/*! \brief Class FileManager.h.
+ *
+ *  Handle with file operations.
+*/
 #ifndef FILEMANAGER_H
 #define FILEMANAGER_H
 
@@ -8,15 +12,17 @@
 #include <iostream>
 #include <sstream>
 
+/*! FileManager class */
 class FileManager
 {
 	/*!
      * Public section
 	*/
 	public:
+
 		/*! Functions */
-		FileManager( void );  // class destructor
-		~FileManager( void ); // class constructor
+		FileManager( void );  /*!< Constructor */
+		~FileManager( void ); /*!< Destructor */
 
 		/*! Load content from file */
 		void LoadContent( const char* filename, std::vector<std::vector<std::string>> &attributes,

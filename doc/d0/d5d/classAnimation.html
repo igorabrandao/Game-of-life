@@ -24,7 +24,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Game of Life
    </div>
-   <div id="projectbrief">Este projeto tem como objetivo implementar o ‘Game of Life’ na linguagem de programação C++ de forma a aplicar os conceitos que envolvem orientação a objetos, estruturação de projetos e uso da plataforma SFML aprendidos em sala de aula.</div>
+   <div id="projectbrief">Este projeto é a implementação do ‘Conway&#39;s Game of Life’ na linguagem de programação C++, com o intuito de aplicar todos os conceitos aprendidos em sala de aula.</div>
   </td>
  </tr>
  </tbody>
@@ -101,13 +101,14 @@ Inheritance diagram for Animation:</div>
  <div class="center">
   <img src="../../d0/d5d/classAnimation.png" usemap="#Animation_map" alt=""/>
   <map id="Animation_map" name="Animation_map">
-<area href="../../d8/d92/classFadeAnimation.html" title="Class FadeAnimation.cpp. " alt="FadeAnimation" shape="rect" coords="0,56,96,80"/>
+<area href="../../d8/d92/classFadeAnimation.html" title="Class FadeAnimation.h. " alt="FadeAnimation" shape="rect" coords="0,56,96,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a83f0a16cef7117f187ad596de38dd9d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d5d/classAnimation.html#a83f0a16cef7117f187ad596de38dd9d6">Animation</a> ()</td></tr>
+<tr class="memdesc:a83f0a16cef7117f187ad596de38dd9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Animation.cpp.  <a href="#a83f0a16cef7117f187ad596de38dd9d6">More...</a><br/></td></tr>
 <tr class="separator:a83f0a16cef7117f187ad596de38dd9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a401b68793d4fbf48d481c030ee4b2a16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d5d/classAnimation.html#a401b68793d4fbf48d481c030ee4b2a16">~Animation</a> ()</td></tr>
 <tr class="separator:a401b68793d4fbf48d481c030ee4b2a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,8 +181,11 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Animation.cpp. </p>
 <p>Public section</p>
-<p>Functions Constructor </p>
+<p>Functions Constructor</p>
+<p>Implements the game animations. constructor </p>
 
 </div>
 </div>
@@ -197,7 +201,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Destructor </p>
+<p>Destructor</p>
+<p>destructor </p>
 
 </div>
 </div>
@@ -224,7 +229,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Print the content on the screen</p>
-<p>the animation </p>
+<p>render the animation </p>
 
 <p>Reimplemented in <a class="el" href="../../d8/d92/classFadeAnimation.html#a8a415f623b37c58bb9df2da86625889c">FadeAnimation</a>.</p>
 
@@ -242,7 +247,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>animation active </p>
+<p>get animation active </p>
 
 </div>
 </div>
@@ -259,7 +264,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Get functions</p>
-<p>animation alpha value </p>
+<p>get animation alpha value </p>
 
 </div>
 </div>
@@ -275,7 +280,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>animation scale </p>
+<p>get animation scale </p>
 
 </div>
 </div>
@@ -317,7 +322,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Load the content on the screen</p>
-<p>loader </p>
+<p>content loader </p>
 
 <p>Reimplemented in <a class="el" href="../../d8/d92/classFadeAnimation.html#a8cbe38c1cfe782bc1b6e45be33ee2549">FadeAnimation</a>.</p>
 
@@ -345,7 +350,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Set the alpha to fade transition</p>
-<p>animation alpha value </p>
+<p>set animation alpha value </p>
 
 <p>Reimplemented in <a class="el" href="../../d8/d92/classFadeAnimation.html#ac9b0417da56562a7dc5d9937b4f9dba9">FadeAnimation</a>.</p>
 
@@ -409,7 +414,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Unload the content on the screen</p>
-<p>unloader </p>
+<p>content unloader </p>
 
 <p>Reimplemented in <a class="el" href="../../d8/d92/classFadeAnimation.html#a3638c304d859b8a10c10ec180fefbd28">FadeAnimation</a>.</p>
 
@@ -437,7 +442,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Update the screen content</p>
-<p>animation </p>
+<p>update animation </p>
 
 <p>Reimplemented in <a class="el" href="../../d8/d92/classFadeAnimation.html#a42e110dc376c74e93b170f50044d0655">FadeAnimation</a>.</p>
 
@@ -473,7 +478,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 24 2015 20:50:33 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 22:06:28 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

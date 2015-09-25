@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gamescreen',['GameScreen',['../db/d45/classGameScreen.html',1,'']]]
+  ['inputmanager',['InputManager',['../d5/d39/classInputManager.html',1,'']]]
 ];

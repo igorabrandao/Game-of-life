@@ -1,7 +1,7 @@
-/********************************************//**
-* \drive.cpp
-* \Main
-***********************************************/
+/*! \brief Class main.cpp.
+ *
+ *  Contains the menu function and starts the program.
+*/
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "ScreenManager.h"

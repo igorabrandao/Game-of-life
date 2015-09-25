@@ -1,7 +1,11 @@
+/*! \brief Class MenuManager.cpp.
+ *
+ *  Implements menu's functions.
+*/
 #include "MenuManager.h"
 
 /********************************************//**
-* \class constructor
+* constructor
 ***********************************************/
 MenuManager::MenuManager()
 {
@@ -9,7 +13,7 @@ MenuManager::MenuManager()
 }
 
 /********************************************//**
-* \class destructor
+* destructor
 ***********************************************/
 MenuManager::~MenuManager()
 {
@@ -17,7 +21,7 @@ MenuManager::~MenuManager()
 }
 
 /********************************************//**
-* \load menu content
+* load menu content
 ***********************************************/
 void 
 MenuManager::LoadContent( float width, float height )
@@ -70,7 +74,7 @@ MenuManager::LoadContent( float width, float height )
 }
 
 /********************************************//**
-* \draw menu content
+* draw menu content
 ***********************************************/
 void 
 MenuManager::Draw( sf::RenderWindow &Window )
@@ -83,7 +87,7 @@ MenuManager::Draw( sf::RenderWindow &Window )
 }
 
 /********************************************//**
-* \move up on menu
+* move up on menu
 ***********************************************/
 void 
 MenuManager::MoveUp()
@@ -97,7 +101,7 @@ MenuManager::MoveUp()
 }
 
 /********************************************//**
-* \move down on menu
+* move down on menu
 ***********************************************/
 void 
 MenuManager::MoveDown()

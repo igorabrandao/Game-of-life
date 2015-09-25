@@ -24,7 +24,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Game of Life
    </div>
-   <div id="projectbrief">Este projeto tem como objetivo implementar o ‘Game of Life’ na linguagem de programação C++ de forma a aplicar os conceitos que envolvem orientação a objetos, estruturação de projetos e uso da plataforma SFML aprendidos em sala de aula.</div>
+   <div id="projectbrief">Este projeto é a implementação do ‘Conway&#39;s Game of Life’ na linguagem de programação C++, com o intuito de aplicar todos os conceitos aprendidos em sala de aula.</div>
   </td>
  </tr>
  </tbody>
@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">MenuManager.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/********************************************/</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef MENUMANAGER_H</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MENUMANAGER_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span></div>
@@ -96,44 +96,48 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;SFML/Audio.hpp&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define MAX_NUMBER_OF_ITEMS 3</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d7/de8/classMenuManager.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/de8/classMenuManager.html">MenuManager</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../d7/de8/classMenuManager.html#a1534958928e1e97c949d17ee32ff4369">MenuManager</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        ~<a class="code" href="../../d7/de8/classMenuManager.html">MenuManager</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/de8/classMenuManager.html#a06e5fa2b211b616fd0e060a3b7d37ba8">LoadContent</a>( <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height );</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/de8/classMenuManager.html#a4693fa1e560a5e043ea5fa5f472b22c1">MoveDown</a>(); <span class="comment">// Unload memory allocation</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/de8/classMenuManager.html#a1502e6cbaecd2454ee85be611b07f70d">MoveUp</a>(); <span class="comment">// Update the screen content</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/de8/classMenuManager.html#a56d175fb8cf5a2074f88574468a1ddc5">Draw</a>( sf::RenderWindow &amp;Window ); <span class="comment">// Print the content on the screen</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">int</span> GetPressedItem() { <span class="keywordflow">return</span> selectedItemIndex; }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> SoundStop() { sound.stop(); }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">int</span> selectedItemIndex;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        sf::Font font;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        sf::SoundBuffer buffer;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        sf::Sound sound;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        sf::Texture background;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        sf::Sprite image;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        sf::Text menu[MAX_NUMBER_OF_ITEMS];</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif // MENUMANAGER_H</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor"></span></div>
-<div class="ttc" id="classMenuManager_html_a06e5fa2b211b616fd0e060a3b7d37ba8"><div class="ttname"><a href="../../d7/de8/classMenuManager.html#a06e5fa2b211b616fd0e060a3b7d37ba8">MenuManager::LoadContent</a></div><div class="ttdeci">void LoadContent(float width, float height)</div><div class="ttdef"><b>Definition:</b> MenuManager.cpp:23</div></div>
-<div class="ttc" id="classMenuManager_html_a1534958928e1e97c949d17ee32ff4369"><div class="ttname"><a href="../../d7/de8/classMenuManager.html#a1534958928e1e97c949d17ee32ff4369">MenuManager::MenuManager</a></div><div class="ttdeci">MenuManager()</div><div class="ttdef"><b>Definition:</b> MenuManager.cpp:6</div></div>
-<div class="ttc" id="classMenuManager_html"><div class="ttname"><a href="../../d7/de8/classMenuManager.html">MenuManager</a></div><div class="ttdef"><b>Definition:</b> MenuManager.h:15</div></div>
-<div class="ttc" id="classMenuManager_html_a1502e6cbaecd2454ee85be611b07f70d"><div class="ttname"><a href="../../d7/de8/classMenuManager.html#a1502e6cbaecd2454ee85be611b07f70d">MenuManager::MoveUp</a></div><div class="ttdeci">void MoveUp()</div><div class="ttdef"><b>Definition:</b> MenuManager.cpp:89</div></div>
-<div class="ttc" id="classMenuManager_html_a4693fa1e560a5e043ea5fa5f472b22c1"><div class="ttname"><a href="../../d7/de8/classMenuManager.html#a4693fa1e560a5e043ea5fa5f472b22c1">MenuManager::MoveDown</a></div><div class="ttdeci">void MoveDown()</div><div class="ttdef"><b>Definition:</b> MenuManager.cpp:103</div></div>
-<div class="ttc" id="classMenuManager_html_a56d175fb8cf5a2074f88574468a1ddc5"><div class="ttname"><a href="../../d7/de8/classMenuManager.html#a56d175fb8cf5a2074f88574468a1ddc5">MenuManager::Draw</a></div><div class="ttdeci">void Draw(sf::RenderWindow &amp;Window)</div><div class="ttdef"><b>Definition:</b> MenuManager.cpp:76</div></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define MAX_NUMBER_OF_ITEMS 3</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d7/de8/classMenuManager.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/de8/classMenuManager.html">MenuManager</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="../../d7/de8/classMenuManager.html#a1534958928e1e97c949d17ee32ff4369">MenuManager</a>();      </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="../../d7/de8/classMenuManager.html#a7ea926de3916450fd30baad4385c1490">~MenuManager</a>();     </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/de8/classMenuManager.html#a06e5fa2b211b616fd0e060a3b7d37ba8">LoadContent</a>( <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height ); </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/de8/classMenuManager.html#a4693fa1e560a5e043ea5fa5f472b22c1">MoveDown</a>(); </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/de8/classMenuManager.html#a1502e6cbaecd2454ee85be611b07f70d">MoveUp</a>(); </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/de8/classMenuManager.html#a56d175fb8cf5a2074f88574468a1ddc5">Draw</a>( sf::RenderWindow &amp;Window ); </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d7/de8/classMenuManager.html#a5f909d876d2ad691f6c8228cd3f15a18">   32</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d7/de8/classMenuManager.html#a5f909d876d2ad691f6c8228cd3f15a18">GetPressedItem</a>() { <span class="keywordflow">return</span> selectedItemIndex; } </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d7/de8/classMenuManager.html#a12c6914a725426fcc32318621f15ad2f">   33</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/de8/classMenuManager.html#a12c6914a725426fcc32318621f15ad2f">SoundStop</a>() { sound.stop(); } </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">int</span> selectedItemIndex;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        sf::Font font;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        sf::SoundBuffer buffer;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        sf::Sound sound;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        sf::Texture background;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        sf::Sprite image;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        sf::Text menu[MAX_NUMBER_OF_ITEMS];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif // MENUMANAGER_H</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor"></span></div>
+<div class="ttc" id="classMenuManager_html_a5f909d876d2ad691f6c8228cd3f15a18"><div class="ttname"><a href="../../d7/de8/classMenuManager.html#a5f909d876d2ad691f6c8228cd3f15a18">MenuManager::GetPressedItem</a></div><div class="ttdeci">int GetPressedItem()</div><div class="ttdef"><b>Definition:</b> MenuManager.h:32</div></div>
+<div class="ttc" id="classMenuManager_html_a06e5fa2b211b616fd0e060a3b7d37ba8"><div class="ttname"><a href="../../d7/de8/classMenuManager.html#a06e5fa2b211b616fd0e060a3b7d37ba8">MenuManager::LoadContent</a></div><div class="ttdeci">void LoadContent(float width, float height)</div><div class="ttdef"><b>Definition:</b> MenuManager.cpp:27</div></div>
+<div class="ttc" id="classMenuManager_html_a1534958928e1e97c949d17ee32ff4369"><div class="ttname"><a href="../../d7/de8/classMenuManager.html#a1534958928e1e97c949d17ee32ff4369">MenuManager::MenuManager</a></div><div class="ttdeci">MenuManager()</div><div class="ttdoc">Class MenuManager.cpp. </div><div class="ttdef"><b>Definition:</b> MenuManager.cpp:10</div></div>
+<div class="ttc" id="classMenuManager_html"><div class="ttname"><a href="../../d7/de8/classMenuManager.html">MenuManager</a></div><div class="ttdef"><b>Definition:</b> MenuManager.h:17</div></div>
+<div class="ttc" id="classMenuManager_html_a12c6914a725426fcc32318621f15ad2f"><div class="ttname"><a href="../../d7/de8/classMenuManager.html#a12c6914a725426fcc32318621f15ad2f">MenuManager::SoundStop</a></div><div class="ttdeci">void SoundStop()</div><div class="ttdef"><b>Definition:</b> MenuManager.h:33</div></div>
+<div class="ttc" id="classMenuManager_html_a7ea926de3916450fd30baad4385c1490"><div class="ttname"><a href="../../d7/de8/classMenuManager.html#a7ea926de3916450fd30baad4385c1490">MenuManager::~MenuManager</a></div><div class="ttdeci">~MenuManager()</div><div class="ttdef"><b>Definition:</b> MenuManager.cpp:18</div></div>
+<div class="ttc" id="classMenuManager_html_a1502e6cbaecd2454ee85be611b07f70d"><div class="ttname"><a href="../../d7/de8/classMenuManager.html#a1502e6cbaecd2454ee85be611b07f70d">MenuManager::MoveUp</a></div><div class="ttdeci">void MoveUp()</div><div class="ttdef"><b>Definition:</b> MenuManager.cpp:93</div></div>
+<div class="ttc" id="classMenuManager_html_a4693fa1e560a5e043ea5fa5f472b22c1"><div class="ttname"><a href="../../d7/de8/classMenuManager.html#a4693fa1e560a5e043ea5fa5f472b22c1">MenuManager::MoveDown</a></div><div class="ttdeci">void MoveDown()</div><div class="ttdef"><b>Definition:</b> MenuManager.cpp:107</div></div>
+<div class="ttc" id="classMenuManager_html_a56d175fb8cf5a2074f88574468a1ddc5"><div class="ttname"><a href="../../d7/de8/classMenuManager.html#a56d175fb8cf5a2074f88574468a1ddc5">MenuManager::Draw</a></div><div class="ttdeci">void Draw(sf::RenderWindow &amp;Window)</div><div class="ttdef"><b>Definition:</b> MenuManager.cpp:80</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 24 2015 20:50:33 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 22:06:28 for Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

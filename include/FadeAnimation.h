@@ -1,4 +1,4 @@
-/*! \brief Class FadeAnimation.cpp.
+/*! \brief Class FadeAnimation.h.
  *
  *  Handle the fade animation.
 */
